@@ -1,0 +1,49 @@
+.cbOverlay {
+   background-color: #000;
+   
+}
+
+.cbBox h3 {
+   margin-top:0px;
+   padding-top: 3px;
+   vertical-align: middle;
+   text-align:center;
+   font-size: 12px;
+   font-family:Georgia; 
+   border: 0;   
+     border-color: rgba(255, 255, 255, 0.75) ;
+       border-radius: 8px 8px 8px 8px;
+       box-shadow: 0 0 20px rgba(223,223, 163, 0.8) ;
+       outline: medium none;   
+}
+.cbBox p {
+   margin:3px;
+}
+.cbBox, .cbButtons {
+   text-align:center;
+   background:transparent;
+}
+.cbButton {
+   margin: 3px;
+}
+.cbCloseButton {
+   background: url( close.gif ) no-repeat;
+   width: 16px; height: 16px;
+   position:absolute;
+   top: 9px;
+   right:5px;
+   cursor: pointer;
+}
+.cbBox{}
+.cbContainer {
+   
+  
+}
+.shop_error, .shop_warning, .shop_info, .shop_debug, .shop_critical, .shop_tip {
+   padding:0;
+   color:black; 
+   border: 0px;   
+   font-size: 15px;
+   font-family:Arial; 
+   background:transparent;
+}

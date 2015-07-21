@@ -1,0 +1,92 @@
+/*
+#------------------------------------------------------------------------
+# myStore - May 2010 (for Joomla 1.5)
+#
+# Copyright (C) 2007-2010 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com   
+#------------------------------------------------------------------------ 
+# Based on T3 Framework
+#------------------------------------------------------------------------
+# Copyright (C) 2004-2009 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - GNU/GPL, http://www.gnu.org/copyleft/gpl.html
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites: http://www.joomlart.com - http://www.joomlancers.com
+#------------------------------------------------------------------------
+*/
+
+/* Add to cart button 
+-----------------------------------------------------------------------------*/
+.addtocart_button,
+ .notify_button { border: none; cursor:pointer; background: none; width: 100px; text-align:left; height:30px; font-weight:bold; font-family:inherit; vertical-align: middle; overflow:hidden; }
+input.addtocart_button { cursor:pointer; margin:0 0 0 4px; padding:3px 6px; text-align:center; text-decoration:none; text-transform:uppercase; } 
+input:hover.addtocart_button { }
+.moduletable input.addtocart_button { height: inherit }
+.vmCartContainer input.addtocart_button { display: block;
+margin: 40px -100px 0px 0px;
+float: right;
+position: relative; }
+.vmCartContainer input:hover.addtocart_button { }
+/* The PDF, Email and Print buttons 
+-----------------------------------------------------------------------------*/
+div.buttons_heading { margin:10px 0 0; float:right; padding: 0!important; width: auto; }
+div.buttons_heading a img{ padding-left: 4px;  position:relative; }
+/* The Buttons: previous and next page
+-----------------------------------------------------------------------------*/
+
+a.previous_page { display: block; line-height: 35px; color: #555; font-size: 11px; float: left; width:200px; overflow:hidden; height:35px;}
+
+a.previous_page { padding: 0 0 0 15px; background: url('../../images/vm/b_prev.png') no-repeat 0 50%; }
+
+ a.next_page { display: block; line-height: 35px; color: #555; font-size: 11px; float: right; padding: 0 0 0 25px; overflow:hidden; height:35px; width:200px; }
+
+a.next_page { background: url('../../images/vm/b_next.png') no-repeat 100% 50%; padding: 0 15px 0 0 ; }
+
+a.previous_page { margin-right: 20px;}
+
+.sectiontableheader th { background: #666; color: #fff; }
+
+td.bfont a strong { font: normal 16px Tahoma, Arial, Helvetica, sans-serif!important; }
+
+/* The Buttons Checkout:  continue shopping and Checkout
+-----------------------------------------------------------------------------*/
+
+.continue_link,
+ .checkout_link { float: none; text-indent: 0px; margin: 0; padding: 0; }
+/* The Pagination 
+-----------------------------------------------------------------------------*/
+ul.pagination li { padding: 2px 1px; display: inline; background: none; }
+.clr { clear: both; overflow:hidden; }
+/* Featured Module
+-----------------------------------------------------------------------------*/
+/* Cart window */
+.cbOverlay { background-color: #000; }
+.cbContainer { padding:20px; background: #fff url('../../images/tooltip_bg.png') repeat-x 0 bottom; border: 1px solid #fff; }
+.cbBox,
+.cbContent,
+.cbButtons { background:transparent!important; }
+.cbBox h3 { text-align:left; background: none; position: relative; font-size: 18px; font-weight: normal; padding: 0 0 2px 0; margin: 0 0 15px; border-bottom: 1px dotted #ddd }
+/* Module - VM Cart */
+.vm_cart_prod { border: 1px solid #B5D93A; background: #649401; margin-bottom: 10px; padding: 6px; }
+.vm_cart_prod a { font-size: 14px; }
+.vm_cart_attributes { font-size: 11px; color: #e3ffaa; }
+.vm_cart_quantity { margin-right: 11px;font-size: 12px; color: #fff; }
+.vm_cart_price { float: right; font-size: 14px; }
+.vm_cart_totalprice { float: right; font-size: 22px; color: #fff; }
+.vm_cart_showcart a { background: url('../../images/show_cart.png') no-repeat 0 0; display: block; height: 15px;padding: 2px 0 0 0; text-align: center; width: 77px; font: bold 10px Arial, Helvetica, sans-serif; text-transform:uppercase; color: #739C03!important; text-decoration:none; }
+/* Pathway */
+#gk-container div.pathway { background: #fbfbfb; padding: 2px 6px; }
+#gk-container div.pathway,
+#gk-container div.pathway a { color: #999; text-transform:uppercase; font-size:10px; font-weight: bold; }
+
+
+#vmmainpage {padding-bottom:10px;}
+/* Module VM Categories */
+
+#gk-container .mainlevel,
+#gk-container .sublevel { background:url('../../images/li-bullet.png') no-repeat 0 11px; border-bottom:1px dotted #ddd; line-height:2.4; margin-left:10px; }
+#gk-container a:hover.mainlevel,
+#gk-container a:hover.sublevel { background: url('../../images/li-bullet-hover.png') no-repeat 0 11px; text-decoration: none ; margin-left:10px;}
+#gk-container .sublevel { background-position: 11px 11px; border-left: 1px dotted #ddd; margin: 1px 0 0 15px }
+#gk-container a:hover.sublevel { background-position: 11px 11px; margin-left:10px; }

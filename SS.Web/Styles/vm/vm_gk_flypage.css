@@ -1,0 +1,127 @@
+/*
+#------------------------------------------------------------------------
+# myStore - May 2010 (for Joomla 1.5)
+#
+# Copyright (C) 2007-2010 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com   
+#------------------------------------------------------------------------ 
+# Based on T3 Framework
+#------------------------------------------------------------------------
+# Copyright (C) 2004-2009 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - GNU/GPL, http://www.gnu.org/copyleft/gpl.html
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites: http://www.joomlart.com - http://www.joomlancers.com
+#------------------------------------------------------------------------
+*/
+
+.rcolumn h1 { font-weight: normal; font-size: 220%; line-height: normal; border-bottom: 1px dotted #ddd; margin: 0 0 10px; padding: 0 0 10px; }
+.gk_vm_ { width: 100%; padding: 0 10px; background: #f9f9f9; }
+.td_bg { background: url('../../images/vm/prod_bg.png') repeat-x 0 100%; clear: both; padding: 20px; border:1px solid #eee; }
+.gk_vm_ h1 { float: left; margin: 0; }
+.pprice { font: normal 11px Verdana, Arial, Helvetica, sans-serif;  border-bottom: 1px dotted #ddd; padding: 0 0 10px; }
+.vm_main_info { clear: both; margin: 10px 0 10px 0 ;}
+.vm_main_info div.lf { border: 1px dotted #ddd; padding: 20px; margin-right: 4%; width: 25%; overflow: hidden; text-align:center; }
+.vm_main_info div.lf img { margin-bottom: 15px; }
+.vm_main_info div.rcolumn { float: left; width: 64%; overflow: hidden }
+.vm_main_info div.lf a { text-decoration: none; font: bold 10px Arial, Helvetica, sans-serif; text-transform:uppercase; color: #999; }
+.gk_vm_ select.inputboxattrib { min-width: 200px; }
+.vmCartContainer { float:left; width: 100%; background: none; border: none; padding:20px 0;  }
+.vmCartContainer input.inputboxquantity { color: #666; font-weight: bold; width: 28px; padding: 2px; margin-right: 6px; }
+div.vmCartDetails{
+width: 300px;
+margin: 10px 0px 0 150px;
+}
+
+#quan{float: right;
+margin-right: 25px;}
+
+.vmCartChild { /* Container for the Child Product */ vertical-align: middle; border: none; width: 200px; float: none }
+.vmChildDetail { /* Child Detail, description , attributes ,price, quantity etc */ vertical-align: middle; margin-top: 6px; }
+.vmCartChildElement { /* Individual element styling */ width: 300px; vertical-align: middle; height: 25px; text-align: left; }
+.vmCartAttributes.vmCartAttributes { /* Attributes Div*/ width:300px; margin-top: 5px;}
+.vmAttribChildDetail {  /* Product Attributes Styling */ text-align: left!important; margin-right: 5px; line-height: 30px }
+.vmMultiple { height:35px; }
+.vmChildType { /* Product type div*/ width: 100%; }
+.vmClearDetail { /*Clear the divs afer child types*/ clear: both; }
+.vmClearAttribs { /*Clear the divs before the attributes*/ clear:both; }
+.vmRowOne { /* Odd Row One styling */ background: #ddd; }
+.vmAttribChildDetail select { margin-right: 0px; }
+.vmRowTwo,
+.vmRowOne { /* Even Row Styling */ background: none; }
+/* Thumbnail List  */
+.thumbnailListContainer { clear: both; height: auto; width: 100%; margin: 0 0 0px 0; text-align: left }
+div.socbutton {
+	margin-left:;
+}
+.thumbnailListContainer h5 { margin-bottom: 8px; }
+.thumbnailListContainer a { float: left; margin: 0 10px 10px 0 }
+.thumbnailListContainer a img { padding: 6px; border: 1px dotted #ddd }
+/* The quantity box beneath the "add to cart" button  */
+.quantity_box_button { width:17px; height:17px; border: none; cursor: pointer; vertical-align: middle; margin-top: 3px }
+.quantity_box_button_down,
+.quantity_box_button_up { background: url('../../images/vm/quantity_box_button.png') no-repeat 0 0 !important; }
+.quantity_box_button_up { background-position: 100% 0!important; }
+.quantity_box_button_down:hover { background-position: 0 100%!important; }
+.quantity_box_button_up:hover { background-position: 100% 100%!important; }
+/* Resctrictions */
+.vmMoreCat { font: bold 10px Arial, Helvetica, sans-serif!important; text-transform:uppercase!important; color: #202020; text-align:left; }
+.vmMoreCat { margin-top: 6px; text-transform: none!important; font-size: 12px; }
+.vmRecent,
+.vmRelated,
+.vmMorecategories { background: #F9F9F9; padding:20px; border: 1px solid #eee; border-top-color: #fff; }
+.vmRecent h3,
+.vmRelated h3,
+.vmMorecategories h3,
+.feature h3 { font-size: 100%; color: #202020; text-transform:none; margin-bottom: 5px; }
+.vmRecent ul li { }
+.fprod_con { clear: both; padding: 20px; margin-top: -1px; border:1px dotted #ddd; background: #f9f9f9; }
+.fprod_con h4 { margin-bottom: 11px; }
+.fprod_con a:link,
+.fprod_con a:visited { color: #666; }
+.fprod_con a:hover { color: #202020; }
+.fimage { float: left; margin-right: 20px; }
+.fprod_con form.addtocart_form br { display: none; }
+.fprod_con form.addtocart_form input { padding:3px 1px !important; margin: 0 2px 0 0 }
+.fprod_con form.addtocart_form input.addtocart_button { height: 24px; line-height: 24px; }
+.fprod_con span.productPrice { display: block; margin: 0 0 10px; }
+/* Product list */
+#vmMainPage .vmMainPage2{ 
+	background: url('../../images/moduletable_title.png') repeat-x 0 0; height: 35px; 
+	line-height: 35px; 
+	font-size: 12px; 
+	padding: 0 12px; 
+	margin: 0 0 12px; 
+	border: 1px solid #e7e7e7; 
+	}
+
+.gk_shop_categories { 
+	background: url('../../images/moduletable_title.png') repeat-x 0 0; height: 35px; 
+	line-height: 35px; 
+	font-size: 12px; 
+	padding: 0 12px; 
+	margin: 0 0 12px; 
+	border: 1px solid #e7e7e7; 
+	}
+
+/* #vmMainPage .vmMainPage3 { padding: 2px 0 0 } */
+
+ div.vmMainPage3 { }
+
+.product-Old-Price { color: #9b9b9b; text-decoration:line-through; margin-right: 6px; }
+.you_save { margin-left: 21px; font-size: 11px; font-weight: bold; }
+#gk_product_tab_1 .lf,
+#gk_product_tab_1 .rf { width: 50%; border-top: 1px solid #eee; margin-top: 21px; padding-top: 10px; }
+.availabilityHeader,
+#gk_product_tab_3 h4 { font-size: 100%; text-decoration: none; color: #202020; margin-bottom: 6px; }
+#block_addtocart { clear: both;margin-top: 10px;margin-bottom: 30px;background: #f9f9f9;padding: 6px 8px;border: 1px solid #eee; }
+.cat_childlist a { text-decoration:none; }
+ul#gk_product_tabs { clear: both; list-style-type: none; margin: 0; padding: 0; }
+ul#gk_product_tabs li { display: block; width: auto; float: left; height: 28px; line-height: 28px; margin-right: 4px; background:url("../../images/moduletable_title.png") repeat-x 50% -3px; border:1px solid #eee; border-bottom: none; cursor:pointer; font:bold 11px Arial, Helvetica, sans-serif; padding:2px 6px; text-align:center; text-decoration:none; text-transform:uppercase; color: #202020 }
+.gk_product_tab_active { color: #fff; }
+ul#gk_product_tabs li span { display: block; width: auto; height: 28px; line-height: 28px; margin-left: 3px; padding: 0 4px; }
+ul#gk_product_tabs li:hover { background: #ececec url('../../images/button-h.png') repeat-x scroll 0 100%; border:1px solid #ddd; border-bottom: none; }
+ul#gk_product_tabs li.gk_product_tab_active { background: #E3012D url('../../images/style1/button.png') repeat-x scroll 0 100%; border:1px solid #E3012D; color:#fff !important; border-bottom: none; }
+div#gk_product_tab_2 label { width: 130px; float: left; }
+a#active_menu { color: #202020; font-style: normal !important }

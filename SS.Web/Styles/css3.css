@@ -1,0 +1,190 @@
+/*
+#------------------------------------------------------------------------
+# myStore - May 2010 (for Joomla 1.5)
+#
+# Copyright (C) 2007-2010 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com   
+#------------------------------------------------------------------------ 
+# Based on T3 Framework
+#------------------------------------------------------------------------
+# Copyright (C) 2004-2009 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - GNU/GPL, http://www.gnu.org/copyleft/gpl.html
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites: http://www.joomlart.com - http://www.joomlancers.com
+#------------------------------------------------------------------------
+*/
+
+#gk-nav,
+ .mod_search>input#mod_search_searchword,
+ #gk-container,
+ #gk-header,
+ .moduletable>h3,
+ .moduletable_menu>h3,
+ .moduletable_text>h3,
+ div.color>h3,
+ .buttons input,
+ .form_buttons button,
+input[type="submit"],
+input[type="button"],
+ #gk-nav #gk-cssmenu ul ul,
+ #gk-nav ul.level0>li li div.childcontent,
+ #gk-subnav ul ul ul,
+div.itemComments .itemCommentsForm h3,
+h3.itemCommentsCounter,
+div.itemAuthorBlock,
+div.itemAuthorBlock img.itemAuthorAvatar,
+div.itemAuthorLatest h3,
+div.itemRelated h3,
+div.userBlock,
+div.userBlock img,
+div.itemListCategory,
+div#k2Container div.mycart,
+#jc h4,
+#vmMainPage .vmMainPage2,
+.feature h3,
+.nsp_bottom_interface .pagination li,
+.nsp_top_interface .pagination li,
+.nsp_bottom_interface .pagination li.active,
+.nsp_top_interface .pagination li.active,
+.nsp_bottom_interface .prev,
+.nsp_top_interface .prev,
+.nsp_bottom_interface .next,
+.nsp_top_interface .next,
+.nsp_bottom_interface .counter,
+.nsp_top_interface .counter,
+.gk_vm_minicart_product,
+.gk_vm_show_cart a,
+a.button_details,
+#vmMainPage>h2:first-child,
+a.continue_link,
+a.checkout_link,
+.gk_shop_categories { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+#gk-topsl1 .gk-box>div{
+
+}
+h1.logo,
+div.logo-text { -webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; }
+
+#gk-header { -moz-box-shadow:0 10px 20px #dfdfdf; -webkit-box-shadow:0 10px 20px #dfdfdf; }
+
+.gk_popup_wrap { -webkit-border-radius: 3px; -webkit-border-top-lef-radius: 0; -moz-border-radius: 3px; -moz-border-radius-topleft: 0; border-radius: 3px; border-top-left-radius: 0; }
+
+#popup_cart .gk_popup_wrap { -webkit-border-radius: 3px; -webkit-border-top-right-radius: 0; -moz-border-radius: 3px; -moz-border-radius-topright: 0; border-radius: 3px; border-top-right-radius: 0; 
+}
+#popup_cart .gk_popup_wrap{opacity: 0.9; }
+#popup_cart,
+#popup_login,
+#popup_register { -webkit-box-shadow:2px 2px 3px #999; -moz-box-shadow:2px 2px 3px #999; box-shadow:2px 2px 3px #999; -webkit-border-radius: 3px; -webkit-border-top-left-radius: 0; -moz-border-radius: 3px; -moz-border-radius-topleft: 0; border-radius: 3px; border-top-left-radius: 0; }
+
+.cbContainer { -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; filter:alpha(opacity=80); opacity: 0.8; -moz-opacity:0.8; box-shadow:0 0 16px #777; -moz-box-shadow:0 0 16px #777; -webkit-box-shadow:0 0 16px #777; }
+.cbBox {filter:alpha(opacity=80); opacity: 0.8; -moz-opacity:0.8; }
+.moduletable>h3,
+ .moduletable_menu>h3,
+ .moduletable_text>h3,
+ div.color>h3,
+ #gk-nav ul.level0>li>a,
+ #gk-nav #gk-cssmenu>li>a,
+ #gk-nav #gk-splitmenu>ul>li>a,
+ #gk-nav #gksdl-mainnav>ul>li>a,
+ #gk-nav ul.level0>li.active>a,
+ #gk-nav #gk-cssmenu>li.active>a,
+ #gk-nav #gk-splitmenu>ul>li.active>a,
+ #gk-nav #gksdl-mainnav>ul>li.active>a,
+ #gk-subnav>div>ul>li>a,
+ #gk-container ul.gk_tab_ul-style1 li:hover,
+ #gk-container ul.gk_tab_ul-style1 li,
+ #gk-container ul.gk_tab_ul-style1 li:hover.active,
+ #comments-form #comments-form-send a:hover { text-shadow: 1px 1px 1px #fff; }
+ #gk-subnav>div>ul>li>a.haschild,
+#gk-container ul.gk_tab_ul-style1 li.active { text-shadow:0 0 0 #fff; }
+
+#gk-nav ul.level0>li.haschild:hover>a,
+#gk-nav ul.level0>li.haschild-over:hover>a,
+ #gk-nav #gk-cssmenu>li:hover>a.haschild,
+div.color>h3,
+ul#gk_product_tabs li.gk_product_tab_active,
+input.addtocart_button,
+a.continue_link,
+a.checkout_link { text-shadow: 1px -1px 1px #ad0021; }
+
+#gk-container{
+	/*-webkit-box-shadow: 0px 0px 8px 5px rgba(132, 152, 21, 1);
+-moz-box-shadow:    0px 0px 8px 5px rgba(132, 152, 21, 1);
+box-shadow:         0px 0px 8px 5px rgba(132, 152, 21, 1);*/
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;}
+
+#gk-cart a.popup span,
+ #gk-tools a.popup span,
+ #gk-nav ul.level0>li>a:hover,
+ #gk-nav ul.level0>li:hover>a,
+ #gk-nav #gk-cssmenu>li>a:hover,
+ #gk-nav #gk-cssmenu>li:hover>a,
+ #gk-nav #gk-splitmenu>ul>li>a:hover,
+ #gk-nav #gk-splitmenu>ul>li:hover>a,
+ #gk-nav #gksdl-mainnav>ul>li>a:hover,
+ #gk-nav #gksdl-mainnav>ul>li:hover>a,
+ #gk-nav ul.level0>li.active>a:hover,
+ #gk-nav ul.level0>li.active>a,
+ #gk-nav #gk-cssmenu>li.active>a:hover,
+ #gk-nav #gk-cssmenu>li.active>a,
+ #gk-nav #gk-splitmenu>ul>li.active>a:hover,
+ #gk-nav #gk-splitmenu>ul>li.active>a,
+ #gk-nav #gksdl-mainnav>ul>li.active>a:hover,
+ #gk-nav #gksdl-mainnav>ul>li.active>a,
+ #gk-subnav>.sublevel>ul>li.haschild:hover>a,
+ #gk-container ul.gk_tab_ul-style1 li { -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+
+#gk-nav #gk-cssmenu ul,
+#gk-nav ul.level0>li>div.childcontent {-webkit-border-radius: 3px; -webkit-border-top-left-radius: 0; -moz-border-radius: 3px; -moz-border-radius-topleft: 0; border-radius: 3px; border-top-left-radius: 0; }
+
+#gksdl-subnav,
+#gk-subnav .sublevel { -webkit-border-bottom-right-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-bottomright: 3px; -moz-border-radius-bottomleft: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; }
+
+#gk-subnav ul li.hasChild.active>a,
+ #gk-subnav ul li.hasChild:hover>a,
+ #gk-subnav ul li.hasChild a:active,
+ #gk-subnav ul li.hasChild a:focus { -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px; }
+
+#gk-subnav ul li ul { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; -webkit-border-top-left-radius: 0; -moz-border-radius-topleft: 0; border-top-left-radius: 0; }
+
+#gk-subnav ul li ul ul { -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+
+#gk-nav #gk-cssmenu ul,
+#gk-nav ul.level0>li>div.childcontent,
+#gksdl-subnav ul ul,
+ #gk-nav ul.level0>li li div.childcontent { -webkit-box-shadow:2px 2px 3px #999; -moz-box-shadow:2px 2px 3px #999; box-shadow:2px 2px 3px #999; }
+
+.adminform button,
+#adminForm button,
+.button,
+a.readon,
+#comments-form #comments-form-send a,
+.gk_popup .button:hover,
+a.button_details { -moz-border-radius:3px; -webkit-border-radius:3px; border-radius: 3px; text-shadow: 1px -1px 1px #ad0021; }
+
+.adminform button:hover,
+#adminForm button:hover,
+.adminform button:focus,
+#adminForm button:focus,
+.button:hover,
+.button:focus,
+a.readon:hover,
+a.readon:active,
+a.readon:focus,
+.gk_popup .button,
+input:hover.addtocart_button,
+ul#gk_product_tabs li:hover,
+a:hover.button_details,
+a:hover.continue_link,
+a:hover.checkout_link { text-shadow: 1px 1px 1px #fff; }
+
+ul.pagination li,
+#gk-nav .gk-megamenu ul.level1 li.group .group-title { -moz-border-radius:2px; -webkit-border-radius:2px; border-radius: 2px; }
+
+.gk_is_tooltip { -moz-border-radius:5px; -webkit-border-radius:5px; border-radius: 5px; -webkit-box-shadow:0 0 16px #777; -moz-box-shadow:0 0 16px #777; box-shadow:0 0 16px #777; }
+
+ul#gk_product_tabs li { -moz-border-radius:3px 3px 0 0; -webkit-border-radius:3px 3px 0 0; border-radius:3px 3px 0 0; }

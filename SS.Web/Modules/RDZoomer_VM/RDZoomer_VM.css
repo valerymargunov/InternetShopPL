@@ -1,0 +1,61 @@
+/* This is the moving lens square underneath the mouse pointer. */
+.cloud-zoom-lens {
+	border: 2px solid #888;
+	margin:-2px;	/* Set this to minus the border thickness. */
+	background-color:#fff;	
+	cursor:crosshair;
+}
+/* This is for the title text. */
+.cloud-zoom-title {
+	font-family:Arial, Helvetica, sans-serif;
+	position:absolute !important;
+	background-color:#000;
+	color:#fff;
+	padding:3px;
+	width:100%;
+	text-align:center;
+	font-weight:bold;
+	font-size:10px;
+	top:0px;
+}
+/* This is the zoom window. */
+.cloud-zoom-big {
+	border:2px solid #ccc;
+	overflow:hidden;
+	margin: 2px 0 0 2px;
+}
+
+/*div.mousetrap, a#zoom1.cloud-zoom{margin-left:20px;}
+*//* This is the loading message. */
+.cloud-zoom-loading {
+	display:none;
+/*
+	color:white;
+	background:#222;
+	padding:3px;
+	border:1px solid #000;	
+	margin:0 auto;
+*/
+}
+#wrap{
+	width:0;
+	font-size:13px;
+}
+
+
+#zoom_main{
+	margin-left:20px;
+	font-size:0;
+	width:230px;
+}
+.cbContainer {z-index:501;}
+
+
+#zoom_main img{
+	border:2px solid #999;
+}
+
+
+#zoom_thumb img{
+	border:2px solid #999;
+}

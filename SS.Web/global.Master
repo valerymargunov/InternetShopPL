@@ -1,0 +1,970 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="global.master.cs" Inherits="SS.Web.global" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="keywords" content="Одвежда, обувь, аксессуары" />
+    <meta name="description" content="" />
+    <meta name="generator" content="" />
+    <title>StreetStyleOnline.Ru - Интернет-магазин молодежной обуви и одежды ведущих европейских и американских брендов</title>
+    <link href="styles/icon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--для верхнего слайдшоу--%>
+    <link rel="stylesheet" href="modules/mod_btslideshow/assets/skitter/css/skitter.styles.css" type="text/css" />
+    <%--для панельки позвоните--%>
+    <link rel="stylesheet" href="modules/mod_jatoppanel/assets/style.css" type="text/css" />
+    <%--для зума картинок--%>
+    <link href="modules/RDZoomer_VM/RDZoomer_VM.css" rel="stylesheet" type="text/css" />
+    <!--menu catalog style-->
+    <link rel="stylesheet" href="styles/menu/catalog.css" type="text/css" />
+    <link rel="stylesheet" href="styles/system.css" type="text/css" />
+    <link rel="stylesheet" href="styles/general.css" type="text/css" />
+    <link rel="stylesheet" href="styles/addons.css" type="text/css" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="styles/template.css" type="text/css" />
+    <link rel="stylesheet" href="styles/joomla.css" type="text/css" />
+    <link rel="stylesheet" href="styles/gk_stuff.css" type="text/css" />
+    <link rel="stylesheet" href="styles/vm/vm_major.css" type="text/css" />
+    <link rel="stylesheet" href="styles/vm/vm_gk_flypage.css" type="text/css" />
+    <link rel="stylesheet" href="styles/vm/browse_notables.css" type="text/css" />
+    <link rel="stylesheet" href="styles/css3.css" type="text/css" />
+    <link rel="stylesheet" href="styles/typo.css" type="text/css" />
+    <link href="styles/style3.css" rel="stylesheet" media="all" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Philosopher:700,400&subset=latin,cyrillic' rel='stylesheet' type='text/css' />
+    <link href="styles/menu/css.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="scripts/mootools.js"></script>
+    <script type="text/javascript" src="scripts/domready_fix.js"></script>
+    <script type="text/javascript" src="scripts/caption.js"></script>
+    <script type="text/javascript" src="scripts/spoiler.js"></script>
+    <script type="text/javascript" src="scripts/jvslideshow.js"></script>
+    <script type="text/javascript" src="scripts/jquery-1.3.2.min.js"></script>
+    <script type="text/javascript" src="modules/mod_btslideshow/assets/js/btloader.min.js"></script>
+    <script type="text/javascript" src="modules/mod_jatoppanel/assets/script.js"></script>
+    <script type="text/javascript" src="modules/RDZoomer_VM/jquery-1.6.2.min.js"></script>
+    <script type="text/javascript" src="modules/RDZoomer_VM/jquery.url.js"></script>
+    <script type="text/javascript">
+        jQuery.noConflict();
+        jQuery(document).ready(function () {
+            var main_image = jQuery("#zoom_main a").attr("href");
+            jQuery("div#zoom_thumb img").unwrap('<a></a>');
+            jQuery("div#zoom_main img").unwrap('<a></a>');
+            var thumb_height = jQuery("div#zoom_thumb img").height();
+            jQuery("#zoom_thumb").prepend('<img id="main_thumb" />');
+            jQuery("img#main_thumb").attr("src", main_image);
+            jQuery("img#main_thumb").attr("style", "height:" + thumb_height + "px");
+            jQuery("div#zoom_main img").attr("src", main_image);
+            var max_size = 200;
+            jQuery("div#zoom_main img").each(function (i) {
+                jQuery(this).removeAttr("width");
+                jQuery(this).removeAttr("height");
+                if ('w' == 'h') {
+                    jQuery(this).css({ height: max_size });
+                } else {
+                    jQuery(this).css({ width: max_size });
+                }
+            });
+            var rel = "position:'right', zoomWidth:'350', zoomHeight:'auto', smoothMove:'15', adjustY:'-4' ";
+            jQuery("div#zoom_main img").wrap('<a href="' + main_image + '" class = "cloud-zoom" id="zoom1" rel="' + rel + '" ></a>');
+            var th_num = 0;
+            jQuery("div#zoom_thumb img").each(function () {
+                th_num++;
+                var thumb_image = jQuery(this).attr("src");
+                var image = jQuery.url.setUrl(thumb_image).attr("file");
+                var dir = jQuery.url.setUrl(thumb_image).attr("directory");
+                var len = dir.length;
+                var dir = dir.substr(0, len - 1);
+                var subdir = dir.split(/[/]+/).pop();
+                if (subdir == "resized") {
+                    dir = dir.substr(0, len - 9);
+                    ext = image.split('.')[1];
+                    image = image.split('.')[0];
+                    image = image.split('_')[0];
+                    image = image + '.' + ext;
+                }
+                var thumb_image = dir + '/' + image;
+                var rel = "useZoom: 'zoom1', smallImage: '" + thumb_image + "'	 ";
+                jQuery(this).wrap('<a href="' + thumb_image + '" class="cloud-zoom-gallery"	rel="' + rel + '"	 >	</a>');
+            });
+            if (th_num < 2) {
+                jQuery("div#zoom_thumb").remove();
+            }
+        });
+    </script>
+    <script type="text/javascript" src="modules/RDZoomer_VM/cloud-zoom.1.0.2.min.js"></script>
+    <script type="text/javascript" src="scripts/DropDownMenuX_Packed.js"></script>
+    <script type="text/javascript" src="scripts/gk.script.js"></script>
+    <script type="text/javascript" src="scripts/css.js"></script>
+    <script type="text/javascript">
+        if (!window.VK) {
+            document.write(unescape('<script type="text/javascript" src="http://vkontakte.ru/js/api/openapi.js">%3C/script%3E'));
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="bd" class="fs3 Moz" style="background-image: url('http://fonforsite.ru/_ph/7/2/118015223.jpg');">
+    <form id="form1" runat="server">
+        <div>
+            <div id="gk-wrapper" class="main">
+                <a name="Top" id="Top"></a>
+                <!-- TOOLBAR -->
+                ﻿<div style="margin: -23px 0 20px 0;">
+                    <script type="text/javascript">
+                        window.addEvent('load', function () {
+                            new JAToppanel('ja-toppanel-mainwrap61600977', { modulenid: '177', duration: 500, auto: 0, delay: 0, dontshowagain: 0, overlay: 0, $cookie_suffix: 'jatoppanel_' });
+                        })
+                    </script>
+                    <div class="ja-toppanel-mainwrap" style="position: fixed;">
+                        <div class="ja-toppanel-container" id="ja-toppanel-mainwrap61600977">
+                            <div class="ja-toppanel-panels">
+                                <div class="ja-toppanel-wraper bg-transparent">
+                                    <div class="ja-toppanel-content">
+                                        <ul class="ja-toppanel-row">
+                                            <li class="first-item">
+                                                <div style="text-align: center; font-size: 16px;">
+                                                    Свяжитесь с нами:
+                                                    <br />
+                                                    +7(968) 447-67-15
+                                                    <br />
+                                                    +7(916) 121-74-15
+                                                    <br />
+                                                    support@streetstyleonline.ru
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="ja-toppanel-button-wraper " id="ja-toppanel-button-wraper-177">
+                                    <div class="ja-toppanel-button-subwap btn-left">
+                                        <div class="ja-toppanel-button-l"></div>
+                                        <div class="ja-toppanel-button">Контакты</div>
+                                        <div class="ja-toppanel-button-r"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="gk-toolbar">
+                    <div id="gk-top-menu">
+                        <ul>
+                            <li style="color: white;"><a href="contacts.aspx"><span>Контакты</span></a></li>
+                            <li class="item61" style="color: white;"><a href="payment.aspx"><span>Оплата</span></a></li>
+                            <li class="item62" style="color: white;"><a href="delivery.aspx"><span>Доставка</span></a></li>
+                            <li class="item63" style="color: white;"><a href="return.aspx"><span>Возврат товара</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div id="gk-items" style="float: right;">
+                        (  товаров: <strong>...</strong>)
+                    </div>
+                    <div id="gk-cart">
+                        <a href="#" id="btn_cart"><span>Корзина</span></a>
+                    </div>
+                    <div id="gk-tools">
+                        <div>
+                            <a href="login.aspx" id="btn_login_new"><span style="margin-left: 4px;">Авторизация | Регистрация</span></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- MAIN NAVIGATION -->
+                <div id="gk-nav-wrap" class="clearfix">
+                    <h1 class="logo">
+                        <a href="/" title="StreetStyle-Online.ru - Интернет-магазин молодежной обуви и одежды ведущих европейских и американских брендов"><span>StreetStyle-Online.ru - Интернет-магазин молодежной обуви и одежды ведущих европейских и американских брендов</span></a>
+                    </h1>
+                    <div id="gk-nav" class="clearfix">
+                        <div id="gk-mainnav" class="clearfix">
+                            <div style="padding-left: 0px;">
+                                <!--SWmenuPro6.4 J1.5 gosumenu-->
+                                <div runat="server" id="RootMenu" align="center">
+                                    
+                                           <%-- <td class='item11-acton'>
+                                                <a href="#" class="item1">ИГРУШКИ</a>
+                                                <div class="section">
+                                                    <a href="#" class="item2">
+                                                        <img class="seq1" border="0" src="images/arrow_right.png" vspace="30" hspace="3" width="24" height="24" alt="ОДЕЖДА" />
+                                                        <img class="seq2" border="0" src="images/arrow_right.png" vspace="3" hspace="30" width="24" height="24" alt="ОДЕЖДА" />
+                                                        КОНСТРУКТОРЫ
+                                                    </a>
+                                                    <div class="section">
+                                                        <a href="viewcategory.aspx?categoryId=44" class="item2">КОНСТРУКТОРЫ 1</a>                                              
+                                                    </div>
+                                                </div>
+                                            </td>--%>
+                                </div>
+                                <script type="text/javascript">
+
+                                    function makemenu165() {
+                                        var ddmx165 = new DropDownMenuX('menu165');
+                                        ddmx165.delay.show = 0;
+                                        ddmx165.iframename = 'ddmx165';
+                                        ddmx165.delay.hide = 50;
+                                        ddmx165.position.levelX.left = 0;
+                                        ddmx165.position.levelX.top = 0;
+                                        ddmx165.position.level1.left = 0;
+                                        ddmx165.position.level1.top = 0;
+                                        ddmx165.fixIeSelectBoxBug = false;
+                                        ddmx165.init();
+                                    }
+                                    if (typeof window.addEventListener != "undefined")
+                                        window.addEventListener("load", makemenu165, false);
+                                    else if (typeof window.attachEvent != "undefined") {
+                                        window.attachEvent("onload", makemenu165);
+                                    }
+                                    else {
+                                        if (window.onload != null) {
+                                            var oldOnload = window.onload;
+                                            window.onload = function (e) {
+                                                oldOnload(e);
+                                                makemenu165()
+                                            }
+                                        }
+                                        else {
+                                            window.onload = makemenu165();
+                                        }
+                                    }
+
+                                </script>
+                                <!--End SWmenuPro menu module-->
+                            </div>
+                        </div>
+                        <%--<div id="gk-search">
+                            <!--BEGIN Search Box -->
+                            <form action="" method="post">
+                                <p>
+                                    <input name="keyword" type="text" size="12" title="Поиск" class="inputbox" id="keyword" />
+                                    <input class="button" type="submit" name="Search" value="Поиск" />
+                                </p>
+                            </form>
+                            <!-- End Search Box -->
+                        </div>--%>
+                    </div>
+                </div>
+                <ul class="no-display">
+                    <li><a href="/#gk-content" title="Skip to content">Skip to content</a></li>
+                </ul>
+                <div style="height: 5px;"></div>
+                <!-- HEADER -->
+                <div id="banner1" class="head clearfix">
+                    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+                    <div style="clear: both;"></div>
+                    <div id="mod_btslideshow_164" class="box_skitter mod_btslideshow" style="width: 980px; height: 266px;">
+                        <ul>
+                            <li>
+                                <img class="cubeRandom" src="modules/mod_btslideshow/images/164/slideshow/slide1.png" rel="modules/mod_btslideshow/images/164/thumbnail/slide1.png" />
+                                <div class="label_text"></div>
+                            </li>
+                            <li>
+                                <img class="cubeRandom" src="modules/mod_btslideshow/images/164/slideshow/16449510151227142747554298125656n.jpg" rel="modules/mod_btslideshow/images/164/thumbnail/16449510151227142747554298125656n.jpg" />
+                                <div class="label_text"></div>
+                            </li>
+                            <li>
+                                <img class="cubeRandom" src="modules/mod_btslideshow/images/164/slideshow/sl31.jpg" rel="modules/mod_btslideshow/images/164/thumbnail/sl31.jpg" />
+                                <div class="label_text"></div>
+                            </li>
+                            <li>
+                                <img class="cubeRandom" src="modules/mod_btslideshow/images/164/slideshow/metalm1.png" rel="modules/mod_btslideshow/images/164/thumbnail/metalm1.png" />
+                                <div class="label_text"></div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <script>
+
+                        (function () {
+                            var libs = [
+                                'modules/mod_btslideshow/assets/js/jquery-1.6.2.min.js',
+                                'modules/mod_btslideshow/assets/skitter/js/jquery.skitter.min.js',
+                                'modules/mod_btslideshow/assets/skitter/js/jquery.easing.1.3.min.js',
+                                'modules/mod_btslideshow/assets/skitter/js/jquery.animate-colors-min.js'
+                            ];
+
+                            BT.Loader.js(libs, function () {
+                                jQuery.noConflict();
+                                loadSlideshow();
+                            });
+                        })();
+                        function loadSlideshow() {
+                            jQuery('#mod_btslideshow_164').skitter({
+                                width: 980,
+                                height: 266,
+                                animation: 'random',
+                                numbers: true,
+                                structure:
+                                    '<a href="#" class="prev_button">prev</a>' +
+                                    '<a href="#" class="next_button">next</a>' +
+                                    '<span class="info_slide"></span>' +
+                                    '<div class="container_skitter">' +
+                                        '<div class="image">' +
+                                            '<a href="/"><img class="image_main" /></a>' +
+                                            '<div class="label_skitter"></div>' +
+                                        '</div>' +
+                                    '</div>',
+                                velocity: 1.3,
+                                interval: 3500,
+                                thumb_width: '70px',
+                                thumb_height: '40px',
+                                caption: 'bottom',
+                                caption_width: '250',
+                                navigation: 0,
+                                fullscreen: false
+                            });
+                        };
+                    </script>
+                </div>
+                <!-- GALLERY -->
+                <div id="gk-topsl1" class="clearfix">
+                    <div class="inner cleft cright ctop clearfix">
+                        <div class="clearfix">
+                            <div class="gk-box column gk-box-full" style="width: 100%;">
+                                <div class="moduletable">
+                                    <div class="moduletable_content">
+                                        <link rel="stylesheet" type="text/css" href="styles/style.css" />
+                                        <script type="text/javascript" src="scripts/slider.js"></script>
+                                        <script type="text/javascript">
+                                            /*<![CDATA[*/
+                                            var cart_title = "Корзина"; var ok_lbl = "Продолжить"; var cancel_lbl = "Отменить"; var notice_lbl = "Уведомление"; var live_site = "";				/* ]]>*/
+                                        </script>
+                                        <link rel="stylesheet" type="text/css" href="styles/mooPrompt.css" />
+                                        <script type="text/javascript" src="scripts/mooPrompt.js"></script>
+                                        <script type="text/javascript" src="scripts/theme.js"></script>
+                                        <script type="text/javascript">
+                                            /*<![CDATA[*/
+                                            itemMaxHeight = 50;
+                                            itemMaxWidth = 50;
+                                            intervals = [];
+                                            resize = true;
+                                            isLoading = 0;
+                                            isLoaded = 0;
+                                            hasImages = false;
+                                            try {
+                                                window.addEvent("load", function () {
+
+                                                    $$(".yjwm_scproduct img.resize").each(
+                                                        function (image) {
+                                                            if (image.nodeName.toLowerCase() == "img") {
+
+                                                                ++isLoading;
+                                                                hasImages = true;
+
+                                                                intervals[image.id] = setInterval(function () {
+                                                                    if (image.width && image.height) {
+                                                                        clearInterval(intervals[image.id]);
+                                                                        intervals[image.id] = null;
+                                                                        delete (intervals[image.id]);
+
+                                                                        ++isLoaded;
+
+                                                                        var width = image.width;
+                                                                        var height = image.height;
+
+                                                                        if (width && height) {
+
+                                                                            if (width > itemMaxWidth) {
+                                                                                var ratio = itemMaxWidth / width;
+                                                                                width = itemMaxWidth;
+                                                                                height = Math.ceil(ratio * height);
+
+                                                                                if (height > itemMaxHeight) {
+                                                                                    var ratio = itemMaxHeight / height;
+                                                                                    height = itemMaxHeight;
+                                                                                    width = Math.ceil(ratio * width);
+
+                                                                                };
+                                                                            };
+
+                                                                            if (height > itemMaxHeight) {
+                                                                                var ratio = itemMaxHeight / height;
+                                                                                height = itemMaxHeight;
+                                                                                width = Math.ceil(ratio * width);
+
+                                                                                if (width > itemMaxWidth) {
+                                                                                    var ratio = itemMaxWidth / width;
+                                                                                    width = itemMaxWidth;
+                                                                                    height = Math.ceil(ratio * height);
+                                                                                }
+
+                                                                            };
+
+                                                                            $(image).setStyles({ "height": height + "px", "width": width + "px", "visibility": "visible" });
+                                                                            $(image).width = width;
+                                                                            $(image).height = height;
+                                                                            $(image.parentNode).setStyle("height", itemMaxHeight + "px");
+
+
+
+                                                                            $(image.parentNode.parentNode).setStyle("height", itemMaxHeight + "px");
+                                                                            if (isLoading == isLoaded) {
+                                                                                buildCarousel();
+                                                                            }
+                                                                        }
+                                                                    };
+                                                                }, 500
+                                                                );
+                                                            };
+                                                        }
+
+
+                                                    );
+
+                                                    if (!hasImages) {
+                                                        buildCarousel();
+                                                    };
+
+                                                });
+                                            } catch (e) {
+                                            };
+                                            /* ]]>*/
+                                        </script>
+                                        <style type="text/css">
+                                            /*<![CDATA[*/
+                                            #overall_container .productimg {
+                                                visibility: hidden;
+                                                width: 50px;
+                                                height: 50px;
+                                                overflow: hidden;
+                                            }
+
+                                            #overall_container .container {
+                                                margin-top: 0 !important;
+                                            }
+                                            /* ]]>*/
+                                        </style>
+                                        <script type="text/javascript">
+                                            /*<![CDATA[*/
+                                            animateDirection = "left";
+                                            maxShow = 15;
+                                            intervals = [];
+                                            allAmount = 20;
+                                            function buildCarousel() {
+                                                switch (animateDirection) {
+                                                    case "left":
+                                                        slideWidth = $("overall_container").offsetWidth - 70;
+                                                        itemWidth = Math.ceil(slideWidth / maxShow);
+                                                        $$("#overall_container .yjwm_showcase_holder").setStyle("width", (slideWidth) + "px");
+                                                        $$("#overall_container .yjwm_scproduct").setStyle("width", itemWidth + "px");
+                                                        $$("#overall_container .yjwm_sc_in,#overall_container .yjwm_showcase_holder h3").setStyle("width", (itemWidth - 5) + "px");
+                                                        break;
+                                                    case "top":
+                                                        var maxHeight = 0;
+                                                        var elts = $$("#overall_container .yjwm_scproduct img");
+
+                                                        if (elts && typeof elts.length != "undefined" && elts.length) {
+
+                                                            itemWidth = 0;
+                                                            var l = elts.length;
+
+                                                            for (var i = 0; i < l; i++) {
+                                                                var item = elts[i];
+                                                                if (typeof item.offsetHeight != "undefined"
+                                                                        && item.offsetHeight
+                                                                        && item.offsetHeight > maxHeight) {
+                                                                    maxHeight = item.offsetHeight;
+                                                                };
+                                                            };
+
+                                                            maxHeight += 5;
+
+                                                            if (maxHeight) {
+                                                                slideHeight = maxShow * maxHeight;
+                                                                $$("#overall_container").setStyle("height", (slideHeight + 60) + "px");
+                                                                $$("#overall_container .yjwm_showcase_holder,#overall_container .yjwm_showcase_holder_out").setStyle("height", slideHeight + "px");
+                                                                itemWidth = maxHeight;
+                                                                $$("#overall_container .yjwm_scproduct,#overall_container .yjwm_sc_in").setStyle("height", maxHeight + "px");
+                                                            };
+
+                                                        };
+                                                        break;
+                                                };
+
+                                                if (typeof itemWidth != "undefined" && itemWidth && allAmount > 1) {
+
+                                                    new slider({
+                                                        container: "overall_container",
+                                                        items: ".yjwm_scproduct",
+                                                        itemWidth: itemWidth,
+                                                        visibleItems: 15,
+                                                        effectDuration: 500,
+                                                        autoSlide: 0,
+                                                        mouseEventSlide: 3000,
+                                                        navigation: {
+                                                            "forward": "linkForward",
+                                                            "back": "linkBackward"
+                                                        },
+                                                        animateDirection: "left"
+                                                    });
+                                                };
+
+                                                $("overall_wrapper").setStyle("visibility", "visible");
+                                            };
+
+                                            if (typeof isLoaded == "undefined") {
+                                                window.addEvent("load", buildCarousel);
+                                            };
+                                            /* ]]>*/
+                                        </script>
+                                        <!--[if IE 7.0]>
+					<style type="text/css">
+								#linkBackward,#linkForward{
+									margin: 0!important;
+									position: absolute;
+									top: 0;
+									right: 0;								
+								}
+								#linkForward{
+									right: auto;
+									left: 0;
+								}
+					</style>
+				<![endif]-->
+                                        <style type="text/css">
+                                            /*<![CDATA[*/
+                                            #linkBackward {
+                                                height: 50px;
+                                            }
+
+                                            #linkForward {
+                                                height: 50px;
+                                            }
+
+                                            #overall_container .yjwm_showcase_holder {
+                                                height: 50px;
+                                                margin: 0 36px;
+                                            }
+
+                                            #overall_container .yjwm_showcase_holder,
+                                            #overall_container .yjwm_sc_in,
+                                            #overall_container .yjwm_scproduct {
+                                                height: 50px;
+                                            }
+
+                                                #overall_container .yjwm_scproduct .productimg {
+                                                    height: 60px;
+                                                }
+
+                                            #overall_container .container {
+                                                height: 50px;
+                                            }
+
+                                            #overall_container .yjwm_showcase_holder .productimg img {
+                                                margin: 0;
+                                            }
+                                            /* ]]>*/
+                                        </style>
+                                        <!--[if gte IE 7.0]>
+								<style type="text/css">
+									.yjwm_showcase_holder img{
+										-ms-interpolation-mode: bicubic;
+									};
+									.yjvmsc_products_cart .yjvmsc_addtocart_button{
+										text-indent: 0;
+									}
+										
+								</style>
+							<![endif]-->
+                                        <style type="text/css">
+                                            /*<![CDATA[*/
+                                            #overall_container .yjwm_showcase_holder h3 a,
+                                            #overall_container .yjwm_showcase_holder h3 {
+                                                height: 0px;
+                                            }
+
+                                            #overall_container .yjvmsc_descr {
+                                                height: 0px;
+                                            }
+
+                                            #overall_wrapper {
+                                                width: 890px;
+                                            }
+
+                                                #overall_wrapper .price_readmore_container {
+                                                    margin: 0 !important;
+                                                }
+
+                                                #overall_wrapper .yjwmsc_moreinfo,
+                                                #overall_wrapper .yjwmsc_moreinfo a {
+                                                    text-align: center !important;
+                                                }
+
+                                                #overall_wrapper .price_readmore_container .price {
+                                                    text-align: center !important;
+                                                }
+
+                                                #overall_wrapper .yjwm_showcase_holder h3 {
+                                                    text-align: center !important;
+                                                }
+
+                                                #overall_wrapper .productintro {
+                                                    text-align: center !important;
+                                                }
+
+                                            #overall_wrapper {
+                                                visibility: hidden;
+                                            }
+
+                                            #overall_wrapper {
+                                                visibility: hidden;
+                                            }
+                                            /* ]]>*/
+                                        </style>
+                                        <style type="text/css">
+                                            /*<![CDATA[*/
+                                            #overall_container .yjwm_scproduct .productimg {
+                                                width: 100%;
+                                                text-align: center;
+                                            }
+
+                                                #overall_container .yjwm_scproduct .productimg img {
+                                                    display: block;
+                                                    margin: 0 auto;
+                                                }
+
+                                            /* ]]>*/
+                                        </style>
+                                        <div id="overall_wrapper" class="overall_wrapper">
+                                            <div id="overall_container" class="overall_container">
+                                                <div class="yjwm_showcase_holder_out">
+                                                    <div class="yjwm_showcase_holder">
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/paulfrank.gif" alt="Paul Frank" title="Paul Frank" class="resize" id="mf159" />
+                                                                    </a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/atticus.gif" alt="Atticus" title="Atticus" class="resize" id="mf173" />
+                                                                    </a>
+
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/macbeth.gif" alt="Macbeth" title="Macbeth" class="resize" id="mf175" />
+                                                                    </a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/cr8.gif" alt="Creative Recreation" title="Creative Recreation" class="resize" id="mf158" />
+                                                                    </a>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <h3>
+                                                                    <a href="" title="Emerica Подробнее...">Emerica				       		</a>
+                                                                </h3>
+
+                                                                <div class="container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/batnorton.png" alt="Bat Norton" title="Bat Norton" class="resize" id="mf164" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/gravis.gif" alt="Gravis" title="Gravis" class="resize" id="mf168" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/logo-emily.gif" alt="EMILY" title="EMILY" class="resize" id="mf171" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/hy.gif" alt="Hydroponic" title="Hydroponic" class="resize" id="mf169" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/rsz_logo1.png" alt="Iguana" title="Iguana" class="resize" id="mf157" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <h3>
+                                                                    <a href="" title="Spice Подробнее...">Spice				       		</a>
+                                                                </h3>
+                                                                <div class="container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/nikita.png" alt="Nikita" title="Nikita" class="resize" id="mf152" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <h3>
+                                                                    <a href="" title="Duck And Cover Подробнее...">Duck And Cover				       		</a>
+                                                                </h3>
+                                                                <div class="container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/airholelogo.jpg" alt="Airhole" title="Airhole" class="resize" id="mf166" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <h3>
+                                                                    <a href="" title="ES Подробнее...">ES				       		</a>
+                                                                </h3>
+                                                                <div class="container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/3cslogo.jpg" alt="3CS" title="3CS" class="resize" id="mf154" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <h3>
+                                                                    <a href="" title="Orisue Подробнее...">Orisue				       		</a>
+                                                                </h3>
+                                                                <div class="container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <h3>
+                                                                    <a href="" title="LRG Подробнее...">LRG				       		</a>
+                                                                </h3>
+                                                                <div class="container">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/grenade.gif" alt="Grenade" title="Grenade" class="resize" id="mf172" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="yjwm_scproduct">
+                                                            <div class="yjwm_sc_in">
+                                                                <div class="container">
+                                                                    <a href="" class="productimg">
+                                                                        <img src="images/stories/planet.png" alt="Planet Earth" title="Planet Earth" class="resize" id="mf170" />
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="right_nav_link">
+                                                    <a class="linkForward" id="linkForward" title="Назад"></a>
+                                                </div>
+                                                <div class="left_nav_link">
+                                                    <a class="linkBackward" id="linkBackward" title="Вперед"></a>
+                                                </div>
+                                            </div>
+                                            <a class="all" href="">Все бренды</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="height: 2px;"></div>
+                <!-- MAIN CONTAINER -->
+                <div id="gk-container">
+                    <div class="static clearfix">
+                        <div id="gk-mainbody" style="width: 100%">
+                            <!-- CONTENT -->
+                            <div id="gk-main" style="width: 76%">
+                                <div class="inner ctop cright cleft clearfix">
+                                    <div id="gk-contentwrap">
+                                        <div id="gk-content" class="column" style="width: 100%">
+                                            <div id="gk-current-content" class="column" style="width: 100%">
+                                                <div class="inner cleft ctop cbottom cright">
+                                                    <!--content -->
+                                                    <div class="gk-content-bottom clearfix">
+                                                        <div class="inner ctop cleft cright">
+                                                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                                            </asp:ContentPlaceHolder>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //CONTENT -->
+                            <!-- LEFT COLUMN-->
+                            <div id="gk-left" class="column sidebar" style="width: 24%">
+                                <div class="gk-colswrap clearfix gk-l1">
+                                    <div class="gk-col  column" style="width: 100%">
+                                        <div class="inner ctop cleft cbottom">
+                                            <div id="jlvkgroup98267412" style="margin: 10px 0 0 0; border: 1px solid #DFE0DF; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;">
+                                                <script type="text/javascript">
+                                                    VK.Widgets.Group("jlvkgroup98267412", { mode: 0, width: "220", height: "500", wall: 20 }, "98267412");
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //LEFT COLUMN-->
+                        </div>
+                    </div>
+                    <!-- BOTTOM MODULES -->
+                    <%--<div id="gk-botsl1" class="clearfix">
+                        <div class="inner ctop cleft cright clearfix">
+                            <div class="clearfix">
+                                <div class="gk-box column gk-box-full" style="width: 100%; height: 260px;">
+                                    <div class="moduletable">
+                                        <div class="moduletable_content">
+                                            <!-- VK Widget -->
+                                            <div id="jlvkgroup55122792test" style="margin: 10px 0 0 0; border: 1px solid #DFE0DF; border-radius: 4px; -moz-border-radius: 4px; -webkit-border-radius: 4px;">
+                                                <script type="text/javascript">
+                                                    VK.Widgets.Group("jlvkgroup55122792test", {mode: 0, width: "910", height: "180", wall: 20}, 55122792);
+                                                </script>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>--%>
+                </div>
+                <!-- FOOTER -->
+                <div align="center">
+                    <script type="text/javascript">(function () {
+    if (window.pluso) if (typeof window.pluso.start == "function") return;
+    if (window.ifpluso == undefined) {
+        window.ifpluso = 1;
+        var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+        s.type = 'text/javascript'; s.charset = 'UTF-8'; s.async = true;
+        s.src = ('https:' == window.location.protocol ? 'https' : 'http') + '://share.pluso.ru/pluso-like.js';
+        var h = d[g]('body')[0];
+        h.appendChild(s);
+    }
+})();</script>
+                    <div class="pluso" data-background="transparent" data-options="big,square,line,horizontal,nocounter,theme=03" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,vkrugu,yazakladki"></div>
+                    <div class="gk-copyright" style="text-align: center; float: none !important">
+                        Copyright © 2014, StreetStyleOnline.Ru | Все права защищены.
+                    </div>
+                </div>
+                <div id="gk-footer" class="clearfix">
+                </div>
+            </div>
+            <!-- POPUPS -->
+            <div id="popup_login" class="gk_popup">
+                <div class="gk_popup_wrap">
+                    <div class="popup_col">
+                        <div style="width: 140px;">
+                            <label for="username_vmlogin">Имя пользователя</label><br />
+                            <input class="inputbox" type="text" id="username_vmlogin" size="12" name="username" />
+                            <br />
+                            <label for="password_vmlogin">Пароль</label><br />
+                            <input type="password" class="inputbox" id="password_vmlogin" size="12" name="passwd" />
+                            <br />
+                            <label for="remember_vmlogin">Запомнить</label>
+                            <input type="checkbox" name="remember" id="remember_vmlogin" value="yes" checked="checked" />
+                            <br />
+                            <input type="submit" value="Войти" class="button" name="Login" />
+                            <ul>
+                                <li>
+                                    <a href="">Забыли пароль?</a>
+                                </li>
+                                <li>
+                                    <a href="">Регистрация</a>
+                                </li>
+                            </ul>
+                            <input type="hidden" value="login" name="op2" />
+                            <input type="hidden" value="aW5kZXgucGhwP29wdGlvbj1jb21fY29udGVudCZ2aWV3PWZyb250cGFnZSZJdGVtaWQ9MQ==" name="return" />
+                            <input type="hidden" name="48703898bcc7082e40f9975e562042a1" value="1" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="popup_cart" class="gk_popup">
+                <div class="gk_popup_wrap">
+                    <div class="vmCartModule">
+                        <div style="position: relative; left: 50px;">
+                            <div style="position: relative; left: 30px;">
+                                <img src="images/menu_logo.png" alt="VirtueMart" width="74" border="0" />
+                            </div>
+                            <br />
+                            Ваша корзина пуста.   
+                        </div>
+                        <div class="lf"></div>
+                        <div class="rf"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

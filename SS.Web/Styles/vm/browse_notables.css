@@ -1,0 +1,95 @@
+/*
+
+#------------------------------------------------------------------------
+# myStore - May 2010 (for Joomla 1.5)
+#
+# Copyright (C) 2007-2010 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com   
+#------------------------------------------------------------------------ 
+# Based on T3 Framework
+#------------------------------------------------------------------------
+# Copyright (C) 2004-2009 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - GNU/GPL, http://www.gnu.org/copyleft/gpl.html
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites: http://www.joomlart.com - http://www.joomlancers.com
+#------------------------------------------------------------------------
+*/
+
+table.vmCustomCategories { width: 100%; }
+table.vmCustomCategories td { font-size: 125%; }
+table.vmCustomCategories td a { color: #202020 }
+table.vmCustomCategories td a:hover { color: #CF052B }
+table.vmCustomCategories td img { border: 1px dotted #ddd; padding: 6px; }
+table.vmCustomCategories td:hover img { border-color: #cf052b }
+
+h3.vm_h3_title { font-weight: normal; border-bottom: 1px solid #e7e7e7; margin-bottom: 20px; }
+.orderedd { margin-bottom: 10px; }
+.browseProductContainer { margin: 0; padding: 0;}
+.browseProductContainer h2 { font-weight: normal; font-size: 15px ; margin: 5px 0 1px 0; height:15px; overflow: hidden;}
+.browseProductContainer h2 a { display:inline; font-size: 14px; text-decoration:none; color: #202020;  line-height: 100%; }
+
+div.cbContent div.shop_info {
+background: none;
+}
+#price_stl{
+background: #ADD147;
+border-radius: 0px 0px 10px 10px;
+-moz-border-radius: 0px 0px 10px 10px;
+-webkit-border-radius: 0px 0px 10px 10px;
+width: 152px;
+display: block;
+text-align: center;
+margin: 1px auto 0px auto;
+position: relative;
+}
+
+.browseProductContainer .productPrice {font-size: 11px !important;}
+.browseProductrating { font-size: 90%; color: #999}
+.browseProductrating br {display: none;}
+.browseProductrating img {padding: 0 0 6px;}
+.button_details {
+      
+     /* go to joomla.css - line 190*/
+}
+
+.browseProductContainer .productPrice,
+.feature .productPrice { font: bold 12px Verdana, Arial, Helvetica, sans-serif; color: #CF1919; padding:4px 0 4px 0; align:center;}
+#product_list { clear: both; padding-top: 5px;}
+#product_list>div {float: left; margin: 0 0 10px 2%; }
+#product_list div.first_col {margin:0 0 0 10px;}
+
+a.gk_vm_product_image {
+	display: block; 
+	width:150px;
+	text-align: center; 
+	-webkit-box-shadow: 0px 1px 8px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    0px 1px 8px rgba(50, 50, 50, 0.75);
+	box-shadow:         0px 1px 8px rgba(50, 50, 50, 0.75);
+	z-index:110;
+	margin: 0 auto;
+	}
+	
+a:hover.gk_vm_product_image { 
+	-webkit-box-shadow: 1px 1px 25px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    1px 1px 25px rgba(50, 50, 50, 0.75);
+	box-shadow:         1px 1px 25px rgba(50, 50, 50, 0.75);
+	}
+	
+div.gk-a {height:63px; vertical-align:top;}
+#nagl { float: left; width:100%;}
+#nagl h3 {}
+#category_order { width: 220px; height: 26px; line-height: 27px; float: right; margin-right: 6px; text-indent:9px; }
+#category_header div.buttons_heading,
+ #category_order,
+ #category_header .rf { margin: 8px 6px 0 0; }
+#category_header div.buttons_heading { float: right; margin-right: 6px; }
+
+.recenlts { clear:both; padding:5px; margin-bottom: 2px; }
+.feature { margin: 12px 0 0 }
+.recenlts { background: url('../../images/vm/prod_bg.png') repeat-x 0 100%; margin-top: 10px; background-position: 0 0; border-top: 1px solid #eee }
+.recenlts h3 {font-size: 110%}
+.feature h3, #vmMainPage>h2:first-child { background:url('../../images/moduletable_title.png') repeat-x 0 0 transparent; border:1px solid #E7E7E7; font-size:12px; height:35px; line-height:35px; margin:0 0 12px; padding:0 12px; }
+#vmMainPage>h2:first-child {}
+.cat_desc { }

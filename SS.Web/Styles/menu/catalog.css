@@ -1,0 +1,191 @@
+.ddmx165 {
+            border: px none !important;
+        }
+
+            .ddmx165 a.item1,
+            .ddmx165 a.item1:hover,
+            .ddmx165 a.item1-active,
+            .ddmx165 a.item1-active:hover {
+                padding: 10px 15px 5px 15px !important;
+                top: 0px !important;
+                left: 0px;
+                font-size: 12px !important;
+                font-family: Tahoma, Arial, sans-serif !important;
+                text-align: center !important;
+                font-weight: bold !important;
+                text-decoration: none !important;
+                display: block;
+                white-space: nowrap;
+                position: relative;
+                width: auto;
+                height: 27px;
+                border-right: 1px solid rgba(0,0,0,.1);
+                box-shadow: 1px 0 0 rgba(255,255,255,.25);
+                border-left: 1px solid rgba(255,255,255,.25);
+                box-shadow: -1px 0 0 rgba(0,0,0,.1), 1px 0 0 rgba(255,255,255,.25);
+            }
+
+            .ddmx165 td.item11 {
+                padding: 0 !important;
+                border-top: px none !important;
+                border-left: px none !important;
+                border-bottom: px none;
+                border-right: 0 !important;
+                white-space: nowrap !important;
+                width: 150px;
+                height: 27px;
+            }
+
+            .ddmx165 td.item11-last {
+                padding: 0 !important;
+                border: px none !important;
+                white-space: nowrap;
+                width: 150px;
+                height: 27px;
+            }
+
+            .ddmx165 td.item11-acton {
+                padding: 0 !important;
+                border-top: px none !important;
+                border-left: px none !important;
+                white-space: nowrap;
+                border-bottom: px none;
+            }
+
+            .ddmx165 td.item11-acton-last {
+                border: px none !important;
+            }
+
+            .ddmx165 .item11-acton-last a.item1,
+            .ddmx165 .item11-acton a.item1,
+            .ddmx165 .item11-acton-last a:hover,
+            .ddmx165 .item11-acton a:hover,
+            .ddmx165 .item11 a:hover,
+            .ddmx165 .item11-last a:hover,
+            .ddmx165 a.item1-active,
+            .ddmx165 a.item1-active:hover {
+            }
+
+            .ddmx165 a.item2,
+            .ddmx165 a.item2:hover,
+            .ddmx165 a.item2-active,
+            .ddmx165 a.item2-active:hover {
+                padding: 6px 0px 6px 0px !important;
+                font-size: 10px !important;
+                font-family: Tahoma, Arial, sans-serif !important;
+                text-align: center !important;
+                font-weight: bold !important;
+                text-decoration: none !important;
+                display: block;
+                white-space: nowrap;
+                width: 152px;
+                height: 16px;
+                opacity: 0.9;
+            }
+
+            .ddmx165 a.item2 {
+                border-top: px none !important;
+                border-left: px none !important;
+                border-right: px none !important;
+            }
+
+            .ddmx165 a.item2-last {
+                border-bottom: px none !important;
+                z-index: 500;
+            }
+
+            .ddmx165 a.item2:hover,
+            .ddmx165 a.item2-active,
+            .ddmx165 a.item2-active:hover {
+                border-top: px none !important;
+                border-left: px none !important;
+                border-right: px none !important;
+            }
+
+            .ddmx165 .section {
+                border: px none !important;
+                position: absolute;
+                visibility: hidden;
+                display: block;
+                z-index: -1;
+            }
+
+            .ddmx165 .subsection a {
+                width: 150px;
+                white-space: normal !important;
+            }
+
+        .ddmx165frame {
+            border: px none !important;
+        }
+
+        .ddmx165 .item11-acton-last .item1 img.seq2,
+        .ddmx165 .item11-acton .item1 img.seq2,
+        .ddmx165 img.seq1 {
+            display: inline;
+        }
+
+        .ddmx165 a.item1:hover img.seq2,
+        .ddmx165 a.item1-active img.seq2,
+        .ddmx165 a.item1-active:hover img.seq2,
+        .ddmx165 a.item2:hover img.seq2,
+        .ddmx165 a.item2-active img.seq2,
+        .ddmx165 a.item2-active:hover img.seq2 {
+            display: inline;
+        }
+
+        .ddmx165 img.seq2,
+        .ddmx165 .item11-acton-last .item1 img.seq1,
+        .ddmx165 .item11-acton .item1 img.seq1,
+        .ddmx165 a.item2:hover img.seq1,
+        .ddmx165 a.item2-active img.seq1,
+        .ddmx165 a.item2-active:hover img.seq1,
+        .ddmx165 a.item1:hover img.seq1,
+        .ddmx165 a.item1-active img.seq1,
+        .ddmx165 a.item1-active:hover img.seq1 {
+            display: none;
+        }
+
+        * html .ddmx165 td {
+            position: relative;
+        }
+        /* ie 5.0 fix */
+        .ddmx165 #menu165-0 {
+            display: block;
+            position: relative;
+            z-index: 10;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 12px;
+            background: transparent;
+            text-shadow: 0 1px 1px rgba(255,255,255,.9);
+            transition: all .25s ease-in-out;
+            border-right: 1px solid rgba(0,0,0,.1);
+            box-shadow: 1px 0 0 rgba(255,255,255,.25);
+            border-left: 1px solid rgba(255,255,255,.25);
+            box-shadow: -1px 0 0 rgba(0,0,0,.1), 1px 0 0 rgba(255,255,255,.25);
+        }
+body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .cbBox h3,
+        div.itemHeader h2.itemTitle,
+        div.userItemHeader h3.userItemTitle,
+        div.catItemHeader h3.catItemTitle,
+        div.genericItemHeader h2.genericItemTitle,
+        div.k2ItemsBlock ul li a.moduleItemTitle,
+        legend,
+        .contentheading,
+        .componentheading,
+        h2.page_title,
+        h2.latestItemTitleList,
+        #container h1,
+        .rcolumn h1,
+        #nagl h3 {
+            font-family: Georgia, "Times New Roman", Times, serif;
+        }
+ .main {
+            width: 980px;
+            margin: 0 auto;
+        }

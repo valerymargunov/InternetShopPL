@@ -1,0 +1,249 @@
+/*
+#------------------------------------------------------------------------
+# myStore - May 2010 (for Joomla 1.5)
+#
+# Copyright (C) 2007-2010 Gavick.com. All Rights Reserved.
+# License: Copyrighted Commercial Software
+# Website: http://www.gavick.com
+# Support: support@gavick.com   
+#------------------------------------------------------------------------ 
+# Based on T3 Framework
+#------------------------------------------------------------------------
+# Copyright (C) 2004-2009 J.O.O.M Solutions Co., Ltd. All Rights Reserved.
+# @license - GNU/GPL, http://www.gnu.org/copyleft/gpl.html
+# Author: J.O.O.M Solutions Co., Ltd
+# Websites: http://www.joomlart.com - http://www.joomlancers.com
+#------------------------------------------------------------------------
+*/
+
+/*
+ * file: template.css
+ */
+
+a,
+#comments .comment-author { color:#415f80; }
+h1.logo,
+div.logo-text { background:#436284 url('../images/style2/color_bg.png') repeat-x 0 bottom; }
+h1.logo { background:#436284 url('../images/style2/color_bg.png') repeat-x 0 bottom; }
+#gk-cart { background:transparent url('../images/style2/cart_icon.png') no-repeat left 0; }
+#gk-cart a { color:#415f80; }
+#gk-cart a.popup span,
+#gk-tools a.popup span { background:#233140; }
+div.color>h3 { background: url('../images/style2/moduletable_title-color.png') repeat-x 0 0; border: 1px solid #283748; }
+.moduletable_menu ul li a:hover,
+.moduletable ul li.even a:hover,
+.moduletable ul li.odd a:hover { color: #415f80; }
+.gk_vm_minicart_product { border: 1px solid #436284; }
+.gk_vm_show_cart a:hover { background: #436284 url('../images/style2/button.png') repeat-x 0 100%; }
+h1.logo>a { background-image:url('../images/style2/logo.png'); }
+
+/*
+ * file: gk_stuff.css
+ */
+#gk-nav ul.level0>li.active>a,
+#gk-nav #gk-cssmenu>li.active>a,
+#gk-nav #gk-splitmenu>ul>li.active>a,
+#gk-nav #gksdl-mainnav>ul>li.active>a,
+#gk-nav ul.level0>li.active:hover>a,
+#gk-nav #gk-cssmenu>li.active:hover>a,
+#gk-nav #gk-splitmenu>ul>li.active:hover>a,
+#gk-nav #gksdl-mainnav>ul>li.active:hover>a,
+#gk-nav ul.level0>li:hover>a,
+#gk-nav #gk-cssmenu>li:hover>a,
+#gk-nav #gk-splitmenu>ul>li:hover>a,
+#gk-nav #gksdl-mainnav>ul>li:hover>a { color:#415f80; }
+#gk-nav ul.level0>li.haschild:hover>a,
+#gk-nav ul.level0>li.haschild-over:hover>a,
+#gk-nav ul.level0>li.haschild.active:hover>a,
+#gk-nav ul.level0>li.haschild-over.active:hover>a,
+#gk-nav #gk-cssmenu>li:hover>a.haschild { background:#436284 url("../images/style2/color_bg.png") repeat-x scroll 0 bottom; }
+#gk-nav #gk-cssmenu ul { background:#233140; }
+#gk-nav #gk-cssmenu ul ul { background:#111f34!important; }
+#gk-nav #gk-cssmenu ul li a:hover,
+#gk-nav #gk-cssmenu ul li a:hover span { color:#929eab!important; }
+#gk-nav #gk-cssmenu ul li { background:transparent url('../images/style2/submenu_line.png') repeat-x 0 bottom!important; }
+#gk-nav #gk-cssmenu ul li li { background:transparent url('../images/style2/subsubmenu_line.png') repeat-x 0 bottom!important; }
+#gk-nav #gk-cssmenu ul li:hover>a { color:#929eab!important; }
+#gk-nav ul.level0>li>div.childcontent { background:#233140; }
+#gk-nav ul.level0>li li div.childcontent { background:#111f34; } 
+#gk-nav div.childcontent ul li:hover>a { color:#929eab!important; }
+#gk-nav div.childcontent ul li { background:transparent url('../images/style2/submenu_line.png') repeat-x 0 bottom; }
+#gk-nav div.childcontent ul li li { background:transparent url('../images/style2/subsubmenu_line.png') repeat-x 0 bottom; }
+#gk-nav div.childcontent ul li .group li { background:transparent url('../images/style2/submenu_line.png') repeat-x 0 bottom; }
+#gk-nav div.childcontent ul li .group li li { background:transparent url('../images/style2/subsubmenu_line.png') repeat-x 0 bottom; }
+#gk-nav .gk-megamenu ul.level1 li.group .group-title { background:#111f34; border:1px solid #2c3f53; }
+#gk-nav .gk-megamenu ul.level1 li.group .group-title .menu-desc { color:#929eab; }
+#gk-subnav>div>ul>li.active>a>span,
+#gk-subnav ul li:hover>a>span,
+#gk-subnav ul li>a:active>span,
+#gk-subnav ul li>a:focus>span { color:#415f80!important; }
+#gk-subnav>.sublevel>ul>li.haschild:hover>a,
+#gk-subnav ul li.hasChild:hover>a,
+#gk-subnav ul li.hasChild>a:active,
+#gk-subnav ul li.hasChild>a:focus { background:#233140; }
+#gk-subnav ul li ul { background:#233140; }
+#gk-subnav ul ul ul { background:#111f34!important; }
+#gk-subnav ul ul ul li,
+#gk-subnav ul ul ul li:first-child { background-image:url('../images/style2/subsubmenu_line.png')!important; }
+#gk-subnav ul ul li:hover>a,
+#gk-subnav ul ul li>a:hover,
+#gk-subnav ul ul li>a:hover span,
+#gk-subnav ul ul li:hover>a span { color:#929eab!important; }
+#gk-subnav ul ul li:first-child,
+#gk-subnav ul ul li { background-image:url('../images/style2/submenu_line.png')!important; }
+#gk-subnav ul ul>li:hover>a,
+#gk-subnav ul ul>li:first-child:hover>a { color:#929eab!important; }
+.gk_popup_wrap { background:#233140; }
+.nsp_bottom_interface .pagination li,
+ .nsp_top_interface .pagination li,
+ .nsp_bottom_interface .pagination li.active,
+ .nsp_top_interface .pagination li.active,
+ .nsp_bottom_interface .prev,
+ .nsp_top_interface .prev,
+ .nsp_bottom_interface .next,
+ .nsp_top_interface .next { background-image:url('../images/style2/nsp_interface.png')!important; }
+.nsp_art h4.nsp_header a { color:#415f80 }
+.nsp_art img.nsp_image:hover { border-color: #415f80 }
+.nsp_links ul li h4 { color:#4a6786; }
+.nsp_links ul li h4 a { color:#4a6786; }
+.gk_is_wrapper-style1 .gk_is_slide img:hover { border:1px solid #415f80; }
+.gk_is_wrapper-style1 .gk_is_pagination span { background-image:url('../images/style2/is_bullets.png'); }
+.gk_is_tooltip a.gk_vm_tooltip_name:hover { color:#436284; }
+.gk_is_tooltip span.product-Old-Price { color:#415f80; }
+#gk-container ul.gk_tab_ul-style1 li.active,
+#gk-container ul.gk_tab_ul-style1 li:hover { background-image:url("../images/style2/button.png");background-color:#436284; border:1px solid #436284!important; }
+#gk-container ul.gk_tab_ul-style1 li:hover.active { background-image:url("../images/style2/button.png");background-color:#436284!important; border:1px solid #436284!important; }
+#gk-container h4.gk_tab_news_header a { color: #415f80; }
+
+/*
+ * file: joomla.css
+ */
+
+.tool-title { background:#436284; }
+ul.pagination li:hover,
+ul.pagination li:hover a,
+ul.pagination span:hover { background:#415f80; border-color: #436284; }
+.gk_popup .button:hover { background-color:#436284;background-image:url('../images/style2/button.png'); }
+input.invalid { border:1px solid #aa0000!important; color:#aa0000!important; }
+label.invalid { color:#aa0000!important; }
+.adminform button,
+#adminForm button,
+.button,
+a.readon,
+input[type="submit"],
+input[type="button"],
+a.button_details,
+a.continue_link,
+a.checkout_link {background: #436284 url('../images/style2/button.png') repeat-x 0 100%;}
+ 
+/*
+ * file: typo.css
+ */
+
+pre, 
+.gk_code1{border-left:5px solid #436284!important}
+.gk_code2{border-top:5px solid #436284; border-bottom:5px solid #436284}
+.gk_code3{border-top:1px solid #436284; border-bottom:1px solid #436284}
+
+p.gk_tips3, 
+p.gk_tips4{background-color:#fffff3; background-position:7px center}
+blockquote div.gk_blockquote1{background:transparent url(../images/style2/typography/open1.png) no-repeat left bottom}
+blockquote div.gk_blockquote1 div{background:transparent url(../images/style2/typography/close1.png) no-repeat right top}
+blockquote div.gk_blockquote2{background:transparent url(../images/style2/typography/open1.png) no-repeat left top}
+blockquote div.gk_blockquote2 div{background:transparent url(../images/style2/typography/close1.png) no-repeat right top}
+blockquote div.gk_blockquote3{background:transparent url(../images/style2/typography/open2.png) no-repeat left bottom}
+blockquote div.gk_blockquote3 div{background:transparent url(../images/style2/typography/close2.png) no-repeat right top}
+blockquote div.gk_blockquote4{background:transparent url(../images/style2/typography/open2.png) no-repeat left top}
+blockquote div.gk_blockquote4 div{background:transparent url(../images/style2/typography/close2.png) no-repeat right top}
+
+.gk_highlight-1{background:#ffffda}
+.gk_highlight-2{background:#436284; color:#fff}
+.gk_highlight-3{background:#69727d; color:#fff}
+span.gk_clear{border-top:1px solid #436284; border-bottom:1px solid #436284; color:#436284}
+span.gk_clear-1{border-top:1px solid #69727d; border-bottom:1px solid #69727d; color:#69727d}
+span.gk_color{color:#436284}
+span.gk_color-1{color:#69727d}
+span.gk_color-2{color:#436284; border-left:2px solid #436284}
+span.gk_color-4{color:#436284; background:#f4fbff}
+span.gk_color-5{color:#fff; background:#69727d}
+span.gk_color-6{color:#d48d1c; background:#ffe; border-top:1px solid #e9e9a1; border-bottom:1px solid #e9e9a1}
+ul.gk_circle1{list-style-image:url(../images/style2/typography/bullet3ul.png)!important}
+ul.gk_bullet1{list-style-image:url(../images/style2/typography/bullet_ol_1_dark.png)!important}
+ul.gk_bullet2{list-style-image:url(../images/style2/typography/bullet1ul.png)!important}
+ul.gk_bullet3{list-style-image:url(../images/style2/typography/bullet2ul.png)!important}
+ul.gk_bullet4{list-style-image:url(../images/style2/typography/bullet_ol_1_color.png)!important}
+ul.gk_square2{list-style-image:url(../images/style2/typography/bullet_squ1_dark.png)!important}
+ul.gk_square3{list-style-image:url(../images/style2/typography/bullet_squ1_color.png)!important}
+div.gk_number1 span{background:transparent url(../images/style2/typography/bullet_ol_2.png) no-repeat center center; color:#fff}
+div.gk_number2 span{background:transparent url(../images/style2/typography/bullet_ol_2_color.png) no-repeat center center; color:#fff}
+
+/*
+ * file: k2.css
+ */
+
+div.itemHeader h2.itemTitle span sup {color:#4a6786; } /* "Featured" presented in superscript */
+div.itemComments ul.itemCommentsList li span.commentAuthorName { color:#415f80; }
+div.itemCommentsForm h4.itemCommentsFormTitle { color:#135cae; }
+div.itemCommentsForm form span#formLog { color:#4a6786; }
+div.subCategory a.subCategoryImage:hover img {border-color: #415f80;}
+div.subCategory h2 a:hover { color: #415f80; }
+div.catItemHeader h3.catItemTitle span sup { color:#4a6786; } /* superscript */
+div.userBlock h2 { color: #415f80; }
+div.userItemHeader h3.userItemTitle span sup { color:#4a6786; }
+div.k2ItemsBlock ul li a.moduleItemReadMore { color: #415f80; }
+div.k2ArchivesBlock ul li a {color: #415f80;}
+table.calendar tr td.calendarDateLinked a:hover { background:#faf9f7; }
+table.calendar tr td.calendarToday { background:#135cae; color:#fff; }
+table.calendar tr td.calendarTodayLinked { background:#415f80; }
+div.k2TagCloudBlock a:hover { background:#415f80; }
+.k2store_item_price_value {color: #4a6786}
+table#cart td#total_price {font-weight: bold; color: #4a6786}
+
+/*
+ * file: vm_major.css
+ */
+.vm_cart_prod { border: 1px solid #B5D93A; background: #649401; }
+.vm_cart_attributes { color: #e3ffaa; }
+.vm_cart_showcart a { color: #739C03!important; }
+
+/*
+ * file: vm_gk_flypage.css
+ */
+.pprice { color: #4a6786; }
+ul#gk_product_tabs li.gk_product_tab_active { background-color:#436284;background-image:url('../images/style2/button.png'); border:1px solid #436284; }
+
+/*
+ * file:browse_notables.css
+ */
+ 
+table.vmCustomCategories td a:hover { color: #415f80 }
+table.vmCustomCategories td:hover img { border-color: #415f80 }
+.browseProductContainer .productPrice,
+.feature .productPrice { color: #4a6786; }
+a:hover.gk_vm_product_image { border-color: #415f80}
+
+/*
+ * file: css3.css
+ */
+ 
+#gk-nav ul.level0>li.haschild:hover>a,
+#gk-nav ul.level0>li.haschild-over:hover>a,
+ #gk-nav #gk-cssmenu>li:hover>a.haschild,
+div.color>h3,
+ul#gk_product_tabs li.gk_product_tab_active,
+input.addtocart_button,
+a.continue_link,
+a.checkout_link { text-shadow: 1px -1px 1px #001929; }
+.adminform button,
+#adminForm button,
+.button,
+a.readon,
+#comments-form #comments-form-send a,
+.gk_popup .button:hover,
+a.button_details { text-shadow: 1px -1px 1px #001929; }
+
+/*
+ * file: JComments override 
+ */
+#comments-form #comments-form-send a{background: #436284 url('../images/style2/button.png') repeat-x 0 100%;}
+#comments-form #comments-form-send a:hover{background: #ececec url('../images/button-h.png') repeat-x 0 100%; color: #444}
