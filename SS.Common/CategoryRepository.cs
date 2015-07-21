@@ -23,13 +23,23 @@ namespace SS.Common
             }
         }
 
-        public IEnumerable<Category> GetCategories(int typeId)
+        public IEnumerable<Category> GetCategories(int parentId)
         {
-            var sql = @"SELECT * FROM Categories WHERE typeId = @typeId";
+            var sql = @"SELECT * FROM Categories WHERE parentId = @parentId";
             using (var conn = new SqlConnection(ConnectionString))
             {
-                var categories = conn.Query<Category>(sql, new { typeId });
+                var categories = conn.Query<Category>(sql, new { parentId = parentId });
                 return categories;
+            }
+        }
+
+        public Category GetCategory(int categoryId)
+        {
+            var sql = @"SELECT * FROM Categories WHERE CategoryId = @categoryId";
+            using (var conn = new SqlConnection(ConnectionString))
+            {
+                var category = conn.Query<Category>(sql, new { categoryId = categoryId }).FirstOrDefault();
+                return category;
             }
         }
     }

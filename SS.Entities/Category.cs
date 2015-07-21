@@ -9,7 +9,8 @@ namespace SS.Entities
     public class Category
     {
         public int CategoryId { get; set; }
-        public int TypeId { get; set; }
-        public string CategoryTitle { get; set; }
+        public string CategoryTitleRU { get; set; }
+        public string CategoryTitlePL { get; set; }
+        public int ParentId { get; set; }
     }
 }
