@@ -1,4 +1,5 @@
 ﻿using SS.Common;
+using SS.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,32 +19,48 @@ namespace SS.Web
             typeRepository = new TypeRepository();
             categoryRepository = new CategoryRepository();
             GenerateMenu();
-        }
+        }      
 
         private void GenerateMenu()
         {
             string menuHtml = @"<table cellspacing='0' cellpadding='0' id='menu165' class='ddmx165'>
                                                 <tr>";
-            var types = typeRepository.GetTypes();
-            foreach (SS.Entities.Type type in types)
+            var typesCategories = categoryRepository.GetCategories(0);
+            foreach (var typeCategory in typesCategories)
             {
-                menuHtml += String.Format(@"
-                                                    <td class='item11-acton'>
-                                                        <a href='#' class='item1'>{0}</a>", type.TitleOfType);
-                var currentCategories = categoryRepository.GetCategories(type.TypeId);
-                foreach (var category in currentCategories)
+                menuHtml += String.Format(@"<td class='item11-acton'>
+                                                        <a href='#' class='item1'>{0}</a> 
+                             <div class='section'>", typeCategory.CategoryTitleRU);
+                menuHtml += GenerateHtmlNestedCategories(typeCategory.CategoryId);
+                menuHtml += "</div></td>";
+            }
+            RootMenu.InnerHtml = String.Format("{0}</tr></table>", menuHtml);
+        }
+
+        private string GenerateHtmlNestedCategories(int parentId)
+        {
+            string menuHtml = String.Empty;
+            var currentCategories = categoryRepository.GetCategories(parentId);
+            foreach (var category in currentCategories)
+            {
+                var aa = categoryRepository.GetCategories(category.CategoryId);               
+                if (categoryRepository.GetCategories(category.CategoryId).Count() == 0)
                 {
-                    menuHtml += String.Format(@"<div class='section'>
-                                                    <a href='viewcategory.aspx?categoryId={0}' class='item2'>
+                    menuHtml += String.Format(@"<a href='viewcategory.aspx?categoryId={0}' class='item2'>
+                                                               {1}
+                                                    </a>", category.CategoryId, category.CategoryTitleRU);
+                }
+                else
+                {
+                    menuHtml += String.Format(@"<a href='viewcategory.aspx?categoryId={0}' class='item2'>
                                                         <img class='seq1' border='0' src='images/arrow_right.png' vspace='30' hspace='3' width='24' height='24' alt='{1}' />
                                                         <img class='seq2' border='0' src='images/arrow_right.png' vspace='3' hspace='30' width='24' height='24' alt='{1}' />
                                                         {1}
-                                                    </a>                                    
-                                                </div>", category.CategoryId, category.CategoryTitle);
+                                                    </a> <div class='section'>", category.CategoryId, category.CategoryTitleRU);
+                    menuHtml += GenerateHtmlNestedCategories(category.CategoryId) + "</div>"; 
                 }
-                menuHtml += "</td>";
             }
-            RootMenu.InnerHtml = String.Format("{0}</tr></table>", menuHtml);
+            return menuHtml;
         }
     }
 }
