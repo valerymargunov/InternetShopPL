@@ -250,7 +250,7 @@
                 <div id="banner1" class="head clearfix">
                     <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
                     <div style="clear: both;"></div>
-                    <div id="mod_btslideshow_164" class="box_skitter mod_btslideshow" style="width: 980px; height: 266px;">
+                    <div id="mod_btslideshow_164" class="box_skitter mod_btslideshow" style="width: 980px; height: 220px;">
                         <ul>
                             <li>
                                 <img class="cubeRandom" src="modules/mod_btslideshow/images/164/slideshow/slide1.png" rel="modules/mod_btslideshow/images/164/thumbnail/slide1.png" />
@@ -315,7 +315,7 @@
                     </script>
                 </div>
                 <!-- GALLERY -->
-                <div id="gk-topsl1" class="clearfix">
+               <%-- <div id="gk-topsl1" class="clearfix">
                     <div class="inner cleft cright ctop clearfix">
                         <div class="clearfix">
                             <div class="gk-box column gk-box-full" style="width: 100%;">
@@ -834,7 +834,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>--%>
                 <div style="height: 2px;"></div>
                 <!-- MAIN CONTAINER -->
                 <div id="gk-container">

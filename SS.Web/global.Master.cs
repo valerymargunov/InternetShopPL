@@ -29,8 +29,8 @@ namespace SS.Web
             foreach (var typeCategory in typesCategories)
             {
                 menuHtml += String.Format(@"<td class='item11-acton'>
-                                                        <a href='#' class='item1'>{0}</a> 
-                             <div class='section'>", typeCategory.CategoryTitleRU);
+                                                        <a href='viewcategory.aspx?categoryId={1}' class='item1'>{0}</a> 
+                             <div class='section'>", typeCategory.CategoryTitleRU, typeCategory.CategoryId);
                 menuHtml += GenerateHtmlNestedCategories(typeCategory.CategoryId);
                 menuHtml += "</div></td>";
             }

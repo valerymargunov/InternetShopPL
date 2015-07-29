@@ -34,10 +34,10 @@
             </GroupSeparatorTemplate>
             <ItemTemplate>
                 <td runat="server" style="width: 150px;">
-                    <div style='height: 18px; text-align: center;'><%#Eval("Title").ToString() %></div>
+                    <div style='height: 18px; text-align: center;'><%#Eval("TitleRu").ToString() %></div>
                     <div style="margin: 0px !important;">
-                        <a href='<%# "viewproduct.aspx?idProduct=" + Eval("ProductId").ToString() %>' class='' style="margin: 0px !important;" title='<%#Eval("Title").ToString() %>'>
-                            <img src='<%#Eval("ImageSrc").ToString() %>' class='' style='width: 150px; height: 200px; margin: 0px !important; padding: 0px !important;' title='<%#Eval("Title").ToString() %>' alt='<%#Eval("Title").ToString() %>' />
+                        <a href='<%# "viewproduct.aspx?idProduct=" + Eval("ProductId").ToString() %>' class='' style="margin: 0px !important;" title='<%#Eval("TitleRu").ToString() %>'>
+                            <img src='<%#Eval("Photos").ToString() %>' class='' style='width: 150px; height: 200px; margin: 0px !important; padding: 0px !important;' title='<%#Eval("TitleRu").ToString() %>' alt='<%#Eval("TitleRu").ToString() %>' />
                         </a>
                         <%--<p id='price_stl' style="margin-top: 0px;">--%>
                         <span id='price_stl' class='' style="margin-top: 0px;"><%#Eval("Cost").ToString() %> Руб.</span>
