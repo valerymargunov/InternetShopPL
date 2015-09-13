@@ -41,573 +41,533 @@
                             })();</script>
                         <div class="pluso" data-background="none;" data-options="medium,square,line,horizontal,nocounter,sepcounter=1,theme=14" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir"></div>
                     </div>
-                    <div class="vmCartContainer">
-                        <div id="DivBrand" runat="server" style="float: left; margin-top: 10px;">
-                            <%--<p style="font: italic  180% Verdana, Arial, Helvetica, sans-serif; float: left;">Бренд</p>--%>
-<%--                            <div class="vmAttribChildDetail" style="float: left;">
-                                <label for="Размер_field">Бренд</label>:
-                            </div>--%>
-                            <div style="float: left; padding: 0 8px;">
-                                <img id="ImageBrand" runat="server" src="" style="width: 100px;" />
-                            </div>
-                        </div>
-                        <div class="vmCartDetails">
-                            <div class="vmCartChild vmRowTwo">
-                                <div class="vmCartAttributes">
-                                    <div class="vmAttribChildDetail" style="float: left;">
-                                        <label for="Размер_field">Размер</label>:
-                                    </div>
-                                    <div class="vmAttribChildDetail" style="float: left;">
-                                        <%--<select class="inputboxattrib" id="Размер_field" name="Размер1005">
-                                            <option value="_не_выбрано">не выбрано</option>
-                                            <option value="_L">L</option>
-                                        </select>--%>
-                                        <asp:DropDownList ID="ListOfSize" runat="server" CssClass="inputboxattrib">
-                                            <asp:ListItem Selected="True" Text="Не выбрано"></asp:ListItem>
-                                        </asp:DropDownList>
-                                    </div>
-                                    <div class="vmAttribChildDetail" style="float: left;">
-                                        <label for="Размер_field">Количество</label>:
-                                    </div>
-                                    <div class="vmAttribChildDetail" style="float: left;">
-                                        <asp:TextBox ID="CountProduct" runat="server" Width="40px" Text="1"></asp:TextBox>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <%--<div float: right;">
-                            <div id="quan">
-                                <label for="quantity1005" class="quantity_box">Количество:&nbsp;</label>
-                                <input type="text" class="inputboxquantity" size="3" id="quantity1005" name="quantity[]" value="1">
-                            </div>
-                            <input type="submit" class="addtocart_button" value="Купить" title="Купить">
-                        </div>--%>
+                    <div id="PhotoBox" runat="server" class="vmCartContainer">                      
                     </div>
+                </div>
 
-                </div>
-                <div style="margin-right: 20px; text-align: right;">
-                    <asp:Button ID="PayButton" runat="server" Text="Добавить в корзину" Height="30px" CssClass="input" />
-                </div>
             </div>
-            <ul id="gk_product_tabs">
-                <li class="gk_product_tab_active"><span>Комментарии</span></li>
-                <li><span>Опрос</span></li>
-                <li><span>Подобрать размер</span></li>
-            </ul>
-            <div class="td_bg clearfix">
-                <div id="gk_product_tab_1" class="gk_product_tab">
-                    <div id="vk_comments"></div>
-                    <script type="text/javascript">
-                        VK.Widgets.Comments("vk_comments", { limit: 10, width: "680", attach: "*" });
-                    </script>
+            <div style="margin-right: 20px; text-align: right;">
+                <asp:Button ID="PayButton" runat="server" Text="Добавить в корзину" Height="30px" CssClass="input" />
+            </div>
+        </div>
+        <ul id="gk_product_tabs">
+            <li class="gk_product_tab_active"><span>Комментарии</span></li>
+            <li><span>Опрос</span></li>
+            <li><span>Подобрать размер</span></li>
+        </ul>
+        <div class="td_bg clearfix">
+            <div id="gk_product_tab_1" class="gk_product_tab">
+                <div id="vk_comments"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Comments("vk_comments", { limit: 10, width: "680", attach: "*" });
+                </script>
+            </div>
+            <div id="gk_product_tab_2" class="gk_product_tab gk_unvisible">
+                <div id="vk_poll"></div>
+                <script type="text/javascript">
+                    VK.Widgets.Poll("vk_poll", { width: "680" }, "122427747_43d2576e88f69b2874");
+                </script>
+            </div>
+            <div class="jlc"></div>
+            <div id="gk_product_tab_4" class="gk_product_tab gk_unvisible">
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    Основной сложностью при покупке вещей через Интернет является подбор размера. Мы предлагаем Вам таблицы размеров, однако практика показывает, что и они не всегда решают эту проблему. Во избежание несовпадений размеров при покупке, пожалуйста, воспользуйтесь услугами нашего&nbsp;консультанта. Сопоставив Ваши параметры и пожелания относительно размера вещи, он сможет подсказать Вам нужный.&nbsp;
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center;">
+                    <img alt="" src="images/stories/1.png"><img alt="" src="images/stories/2.png"><img alt="" src="images/stories/3.png"><img alt="" src="images/stories/4.png"><img alt="" src="images/stories/5.png">
+                    <o:p></o:p>
+                </p>
+                <div align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                    <hr align="center" noshade="noshade" size="1" style="color: #A0A0A0" width="100%">
                 </div>
-                <div id="gk_product_tab_2" class="gk_product_tab gk_unvisible">
-                    <div id="vk_poll"></div>
-                    <script type="text/javascript">
-                        VK.Widgets.Poll("vk_poll", { width: "680" }, "122427747_43d2576e88f69b2874");
-                    </script>
-                </div>
-                <div class="jlc"></div>
-                <div id="gk_product_tab_4" class="gk_product_tab gk_unvisible">
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        Основной сложностью при покупке вещей через Интернет является подбор размера. Мы предлагаем Вам таблицы размеров, однако практика показывает, что и они не всегда решают эту проблему. Во избежание несовпадений размеров при покупке, пожалуйста, воспользуйтесь услугами нашего&nbsp;консультанта. Сопоставив Ваши параметры и пожелания относительно размера вещи, он сможет подсказать Вам нужный.&nbsp;
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center;">
-                        <img alt="" src="images/stories/1.png"><img alt="" src="images/stories/2.png"><img alt="" src="images/stories/3.png"><img alt="" src="images/stories/4.png"><img alt="" src="images/stories/5.png">
-                        <o:p></o:p>
-                    </p>
-                    <div align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                        <hr align="center" noshade="noshade" size="1" style="color: #A0A0A0" width="100%">
-                    </div>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <b>Бейсболка</b><br>
-                        Все, что Вам нужно сделать, — это измерить обхват головы. Приложите сантиметр на&nbsp;2-3&nbsp;см выше бровей и измерьте окружность Вашей головы в самом широком месте.&nbsp;Определите Ваш размер с помощью приведенной таблицы. Всегда округляйте размер до большего.
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <o:p></o:p>
-                    </p>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
-                        <tbody>
-                            <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 25.5pt">
-                                <td style="width: 88.45pt; border: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="118">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Обхват головы<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 36.55pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="49">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        54см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 38.8pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="52">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        54.5см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 40.2pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="54">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        55-56см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 44.85pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="60">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        56-58см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        58-59см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        59-60см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.55pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        60-61см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        62см<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td rowspan="2" style="width: 88.45pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt"
-                                    width="118">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 36.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="49">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td colspan="2" style="width: 79.0pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="105">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td colspan="2" style="width: 94.45pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="126">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td colspan="2" style="width: 3.0cm; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="113">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXL<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="width: 36.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="49">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        6 7/8<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 38.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="52">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 40.2pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="54">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7 1/8<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 44.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="60">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7 1/4<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7 3/8<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7 1/2<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7 5/8<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7 3/4<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p>
-                        <b>&nbsp;Размерная таблица колец</b>
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse: collapse; border: none; background-position: initial initial; background-repeat: initial initial;">
-                        <tbody>
-                            <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 12.75pt">
-                                <td style="width: 85.8pt; border: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="114">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Окружность (мм)<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.65pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        50.3-51.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        51.5-52.8<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        52.8-54<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.55pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        54-56.6<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        57.8-59.1<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        59.1-60.3<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.8pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        60.3-61.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 50.15pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
-                                    width="67">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        61.5-62.8<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 1; height: 21.0pt">
-                                <td style="width: 85.8pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="114">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Диаметр (мм)<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.65pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        16-16.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        16.05.17<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        17-17.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        17.05.18<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        18.05.19<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        19-19.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        19.05.20<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 50.15pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
-                                    width="67">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        20-20.5<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes; height: 22.5pt">
-                                <td style="width: 85.8pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="114">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.65pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        11<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        12<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        13.05.13<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 42.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="57">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        14.05.13<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        19<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        20<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 49.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="66">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        21<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 50.15pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
-                                    width="67">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        22<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        &nbsp;<b>Размерная таблица перчаток</b>
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse: collapse; border: none; background-position: initial initial; background-repeat: initial initial;" width="100%">
-                        <tbody>
-                            <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 15.0pt">
-                                <td colspan="5" style="width: 469.25pt; border: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="626">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Женские перчатки<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 1; height: 15.0pt">
-                                <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="392">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Обхват руки (см.)<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        18<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        19<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        20<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        22<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 2; height: 15.0pt">
-                                <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="392">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XS<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 3; height: 15.0pt">
-                                <td colspan="5" style="width: 469.25pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="626">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        Мужские перчатки<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 4; height: 15.0pt">
-                                <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="392">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Обхват руки (см.)<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        22<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        23<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        24<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        26<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; height: 15.0pt">
-                                <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="392">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XS<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
-                                    width="58">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="MsoNormal" style="margin-bottom: 0.0001pt;">
-                        <strong>Как измерить обхват мужской груди:</strong><br>
-                        - Измеряется по наиболее выступающей точке груди на выдохе.<br>
-                        - Приложите сантиметр прямо под рукой и измерьте обхват Вашей груди<!--[if gte vml 1]><v:rect
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <b>Бейсболка</b><br>
+                    Все, что Вам нужно сделать, — это измерить обхват головы. Приложите сантиметр на&nbsp;2-3&nbsp;см выше бровей и измерьте окружность Вашей головы в самом широком месте.&nbsp;Определите Ваш размер с помощью приведенной таблицы. Всегда округляйте размер до большего.
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <o:p></o:p>
+                </p>
+                <p>
+                    &nbsp;
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse: collapse; border: none;">
+                    <tbody>
+                        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 25.5pt">
+                            <td style="width: 88.45pt; border: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="118">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Обхват головы<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 36.55pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="49">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    54см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 38.8pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="52">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    54.5см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 40.2pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="54">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    55-56см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 44.85pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="60">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    56-58см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    58-59см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    59-60см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.55pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    60-61см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 25.5pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    62см<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2" style="width: 88.45pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt"
+                                width="118">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 36.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="49">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td colspan="2" style="width: 79.0pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="105">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td colspan="2" style="width: 94.45pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="126">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                            <td colspan="2" style="width: 3.0cm; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="113">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXL<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 36.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="49">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    6 7/8<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 38.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="52">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 40.2pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="54">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7 1/8<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 44.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="60">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7 1/4<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7 3/8<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7 1/2<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7 5/8<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7 3/4<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    <b>&nbsp;Размерная таблица колец</b>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse: collapse; border: none; background-position: initial initial; background-repeat: initial initial;">
+                    <tbody>
+                        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 12.75pt">
+                            <td style="width: 85.8pt; border: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="114">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Окружность (мм)<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.65pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    50.3-51.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    51.5-52.8<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    52.8-54<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.55pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    54-56.6<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    57.8-59.1<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    59.1-60.3<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.8pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    60.3-61.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 50.15pt; border: solid #666666 1.0pt; border-left: none; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 12.75pt"
+                                width="67">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    61.5-62.8<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 1; height: 21.0pt">
+                            <td style="width: 85.8pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="114">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Диаметр (мм)<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.65pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    16-16.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    16.05.17<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    17-17.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    17.05.18<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    18.05.19<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    19-19.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    19.05.20<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 50.15pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 21.0pt"
+                                width="67">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    20-20.5<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 2; mso-yfti-lastrow: yes; height: 22.5pt">
+                            <td style="width: 85.8pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="114">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.65pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    11<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    12<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.5pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    13.05.13<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 42.55pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="57">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    14.05.13<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    19<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.6pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    20<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 49.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="66">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    21<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 50.15pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 22.5pt"
+                                width="67">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    22<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    &nbsp;<b>Размерная таблица перчаток</b>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="border-collapse: collapse; border: none; background-position: initial initial; background-repeat: initial initial;" width="100%">
+                    <tbody>
+                        <tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 15.0pt">
+                            <td colspan="5" style="width: 469.25pt; border: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="626">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Женские перчатки<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 1; height: 15.0pt">
+                            <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="392">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Обхват руки (см.)<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    18<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    19<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    20<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    22<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 2; height: 15.0pt">
+                            <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="392">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XS<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 3; height: 15.0pt">
+                            <td colspan="5" style="width: 469.25pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="626">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    Мужские перчатки<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 4; height: 15.0pt">
+                            <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="392">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Обхват руки (см.)<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    22<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    23<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    24<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    26<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr style="mso-yfti-irow: 5; mso-yfti-lastrow: yes; height: 15.0pt">
+                            <td style="width: 294.0pt; border: solid #666666 1.0pt; border-top: none; mso-border-top-alt: solid #666666 1.0pt; background: #EDEDED; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="392">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.85pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XS<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="width: 43.8pt; border-top: none; border-left: none; border-bottom: solid #666666 1.0pt; border-right: solid #666666 1.0pt; mso-border-top-alt: solid #666666 1.0pt; mso-border-left-alt: solid #666666 1.0pt; background: transparent; padding: .75pt .75pt .75pt .75pt; height: 15.0pt"
+                                width="58">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="MsoNormal" style="margin-bottom: 0.0001pt;">
+                    <strong>Как измерить обхват мужской груди:</strong><br>
+                    - Измеряется по наиболее выступающей точке груди на выдохе.<br>
+                    - Приложите сантиметр прямо под рукой и измерьте обхват Вашей груди<!--[if gte vml 1]><v:rect
  id="Прямоугольник_x0020_7" o:spid="_x0000_s1028" alt="Описание: http://streetstyle-online.ru/index.php?page=shop.product_details&amp;category_id=217&amp;flypage=flypage.tpl&amp;product_id=3074&amp;option=com_virtuemart&amp;Itemid=59"
  style='position:absolute;margin-left:-27.2pt;margin-top:0;width:24pt;height:24pt;
  z-index:251657728;visibility:visible;mso-wrap-style:square;
@@ -690,1857 +650,1857 @@ cmF3aW5ncy9fcmVscy9kcmF3aW5nMS54bWwucmVsc1BLBQYAAAAABQAFAGcBAAAVDgAAAAA=
  <o:lock v:ext="edit" aspectratio="t"/>
  <w:wrap type="square" anchory="line"/>
 </v:rect><![endif]--><o:p></o:p>
-                    </p>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
+                    width="100%">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXXL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXXXL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXXXXL<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    48<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    50<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    52<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    54<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    56<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    58<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    60<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    62<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Обхват груди (см.)<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    80-85<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    85-90<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    90-95<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    95-100<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    100-105<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    105-110<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    110-115<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    115-120<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Рост<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    165-170<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    170-175<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    175-180<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    180-185<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    185-190<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    190-195<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    195-200<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    200-205<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    &nbsp;<b>Как измерить обхват женской груди:</b>
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    - Измеряется по наиболее выступающей точке груди на выдохе.<br>
+                    - Приложите сантиметр прямо под рукой и измерьте обхват Вашей груди.<br>
+                    - Сантиметр должен прилегать плотно, но не стягивать грудь.<o:p></o:p>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
+                    width="100%">
+                    <tbody>
+                        <tr>
+                            <td rowspan="2" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXS<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XS<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXL<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    42<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    42-44<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    44-46<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    46-48<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    50<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    52<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Обхват груди<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    72-75<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    75-82<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    82-90<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    90-95<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    95-98<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    98-100<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    100-102<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Рост<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    148-150<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    150-155<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    163<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    168<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    173<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    178<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    183<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <b>Как измерить и подобрать размер мужских джинс:</b>
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    - В таблице указан размер пояса джинс.<br>
+                    - Измерьте обхват бедер в том месте, где Вы обычно носите джинсы.<br>
+                    - Определите Ваш размер с помощью приведенной таблицы.<o:p></o:p>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
+                    width="100%">
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    &nbsp;Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    28<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    30<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    32<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    34<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    36<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    38<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    42<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    44<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    46<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    48<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    50<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    52<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    54<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    56<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    58<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L-XL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XL-XXL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XXXL<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Обхват пояса, см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    74-77<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    78-81<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    82-85<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    86-89<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    90-94<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    95-99<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    100-104<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    105-109<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Длина штанины, см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    104<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    107<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    107<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    110<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    110<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    113<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    113<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    116<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Рост, см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    165-170<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    170-175<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    175-180<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    180-185<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    185-190<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    190-195<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    195-200<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    200-205<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <b>Как измерить и подобрать размер джинс для женщин:&nbsp;<o:p></o:p></b>
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    - В таблице указан размер пояса джинс.<br>
+                    - Измерьте обхват бедер в том месте, где Вы обычно носите джинсы.<br>
+                    - Определите Ваш размер с помощью приведенной таблицы.<o:p></o:p>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
+                    width="100%">
+                    <tbody>
+                        <tr>
+                            <td rowspan="4" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Размер<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    25<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    26<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    27<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    28<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    29<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    30<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    31<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    32<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    32<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    34<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    36<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    38<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    42<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    44<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    46<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    42<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    44<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    46<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    48<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    50<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    52<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    54<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XS<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XS-S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    S-M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    M<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    L-XL<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    XL<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Обхват бедер, см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    84-87<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    88-91<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    92-95<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    96-98<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    99-102<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    103-106<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    107-110<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    111-115<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Длина штанины, см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    102<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    105<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    105<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    108<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    108<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    111<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    111<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    111<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Рост, см<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    157-162<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    162-167<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    165-170<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    168-173<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    171-176<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    174-179<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    177-182<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    180-185<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <b>Как измерить и подобрать размер мужской обуви:<br>
+                    </b>- Поставьте стопу на лист бумаги.- Измерьте сантиметром расстояние от пятки до края пальцев, чтобы определить длину стопы.
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    - Определите Ваш размер с помощью таблицы. В
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0.0001pt;">
+                    - Обведите контур стопы.
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    сегда округляйте размер до большего.
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <o:p></o:p>
+                </p>
+                <div align="center">
                     <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
                         width="100%">
                         <tbody>
                             <tr>
-                                <td rowspan="2" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Размер<o:p></o:p>
+                                        Длина ноги, см<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXXL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXXXL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXXXXL<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        48<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        50<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        52<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        54<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        56<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        58<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        60<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        62<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Обхват груди (см.)<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        80-85<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        85-90<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        90-95<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        95-100<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        100-105<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        105-110<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        110-115<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        115-120<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Рост<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        165-170<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        170-175<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        175-180<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        180-185<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        185-190<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        190-195<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        195-200<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        200-205<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        &nbsp;<b>Как измерить обхват женской груди:</b>
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        - Измеряется по наиболее выступающей точке груди на выдохе.<br>
-                        - Приложите сантиметр прямо под рукой и измерьте обхват Вашей груди.<br>
-                        - Сантиметр должен прилегать плотно, но не стягивать грудь.<o:p></o:p>
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
-                        width="100%">
-                        <tbody>
-                            <tr>
-                                <td rowspan="2" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXS<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XS<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXL<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        42<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        42-44<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        44-46<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        46-48<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        50<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        52<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Обхват груди<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        72-75<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        75-82<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        82-90<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        90-95<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        95-98<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        98-100<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        100-102<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Рост<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        148-150<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        150-155<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        163<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        168<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        173<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        178<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        183<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <b>Как измерить и подобрать размер мужских джинс:</b>
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        - В таблице указан размер пояса джинс.<br>
-                        - Измерьте обхват бедер в том месте, где Вы обычно носите джинсы.<br>
-                        - Определите Ваш размер с помощью приведенной таблицы.<o:p></o:p>
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
-                        width="100%">
-                        <tbody>
-                            <tr>
-                                <td rowspan="3" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        &nbsp;Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        28<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        30<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        32<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        34<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        36<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        38<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        42<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        44<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        46<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        48<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        50<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        52<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        54<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        56<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        58<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L-XL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XL-XXL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XXXL<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Обхват пояса, см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        74-77<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        78-81<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        82-85<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        86-89<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        90-94<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        95-99<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        100-104<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        105-109<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Длина штанины, см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        104<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        107<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        107<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        110<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        110<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        113<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        113<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        116<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Рост, см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        165-170<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        170-175<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        175-180<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        180-185<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        185-190<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        190-195<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        195-200<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        200-205<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <b>Как измерить и подобрать размер джинс для женщин:&nbsp;<o:p></o:p></b>
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        - В таблице указан размер пояса джинс.<br>
-                        - Измерьте обхват бедер в том месте, где Вы обычно носите джинсы.<br>
-                        - Определите Ваш размер с помощью приведенной таблицы.<o:p></o:p>
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
-                        width="100%">
-                        <tbody>
-                            <tr>
-                                <td rowspan="4" style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Размер<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        25<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        26<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        27<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        28<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        29<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        30<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        31<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        32<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        32<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        34<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        36<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        38<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        42<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        44<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        46<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        42<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        44<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        46<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        48<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        50<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        52<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        54<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XS<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XS-S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        S-M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        M<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        L-XL<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        XL<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Обхват бедер, см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        84-87<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        88-91<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        92-95<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        96-98<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        99-102<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        103-106<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        107-110<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        111-115<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Длина штанины, см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        102<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        105<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        105<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        108<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        108<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        111<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        111<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        111<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Рост, см<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        157-162<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        162-167<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        165-170<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        168-173<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        171-176<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        174-179<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        177-182<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        180-185<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <b>Как измерить и подобрать размер мужской обуви:<br>
-                        </b>- Поставьте стопу на лист бумаги.- Измерьте сантиметром расстояние от пятки до края пальцев, чтобы определить длину стопы.
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        - Определите Ваш размер с помощью таблицы. В
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0.0001pt;">
-                        - Обведите контур стопы.
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        сегда округляйте размер до большего.
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <o:p></o:p>
-                    </p>
-                    <div align="center">
-                        <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100.0%; background: black; border-collapse: collapse; border: none; mso-border-alt: solid #BFBFBF 1.0pt; mso-yfti-tbllook: 1184; mso-padding-alt: 0cm 0cm 0cm 0cm"
-                            width="100%">
-                            <tbody>
-                                <tr>
-                                    <td style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                            Длина ноги, см<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            24.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            25<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            25.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            26<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            26.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            27<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 5.0%; border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="5%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            27.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 3.0%; border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="3%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            28<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            28.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            29<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            29.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            30<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            31<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            32<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            33<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            34<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            35<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            36<o:p></o:p>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                            USA<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            6.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            7<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            7.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            8<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            8.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            9<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="5%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            9.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="3%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            10<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            10.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            11<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            11.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            12<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            13<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            14<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            15<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            16<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            17<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            18<o:p></o:p>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                            RUS<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            38<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            39<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            39.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            40<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            41<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            41.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="5%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            42<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="3%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            43<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            43.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            44<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            44.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            45<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            46.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            47.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            48.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            49.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            50.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            51.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                            EUR<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            39<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            40<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            40.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            41<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            42<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            42.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="5%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            43<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="3%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            44<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            44.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            45<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            45.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            46<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            47.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            48.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            49.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            50.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            51.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            52.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                            UK<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            5.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            6<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            6.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            7<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            7.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            8<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="5%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            8.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
-                                        width="3%">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            9<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            9.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            10<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            10.5<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            11<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            12<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            13<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            14<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            15<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            16<o:p></o:p>
-                                        </p>
-                                    </td>
-                                    <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
-                                        <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                            17<o:p></o:p>
-                                        </p>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <b>Как измерить и подобрать размер женской &nbsp;обуви:<br>
-                        </b>- Поставьте стопу на лист бумаги.<br>
-                        - Обведите контур стопы.<br>
-                        - Измерьте сантиметром расстояние от пятки до края пальцев, чтобы определить длину стопы.<br>
-                        - Определите Ваш размер с помощью таблицы. Всегда округляйте размер до большего.<o:p></o:p>
-                    </p>
-                    <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100%; border-collapse: collapse; border: none; background-position: initial initial; background-repeat: initial initial;" width="100%">
-                        <tbody>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        Длина ноги. См<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        20.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        22<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        22.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        23<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        23.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        24<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         24.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         25<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         25.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         26<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         26.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         27<o:p></o:p>
                                     </p>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        USA<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="width: 5.0%; border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="5%">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        4<o:p></o:p>
+                                        27.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="width: 3.0%; border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="3%">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        4.5<o:p></o:p>
+                                        28<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        5<o:p></o:p>
+                                        28.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        5.5<o:p></o:p>
+                                        29<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        6<o:p></o:p>
+                                        29.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        6.5<o:p></o:p>
+                                        30<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7<o:p></o:p>
+                                        31<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        7.5<o:p></o:p>
+                                        32<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        8<o:p></o:p>
+                                        33<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        8.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        9<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        9.5<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        RUS<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        33.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         34<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        34.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         35<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        35.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        36.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        37<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        37.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        38<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        39<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        39.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40<o:p></o:p>
-                                    </p>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        EUR<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        34.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        35<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        35.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         36<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        36.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        37.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        38<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        38.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        39<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        40.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        41<o:p></o:p>
-                                    </p>
-                                </td>
                             </tr>
                             <tr>
-                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                                        UK<o:p></o:p>
+                                        USA<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        1.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        2<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        2.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        3<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        3.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        4<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        4.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        5.5<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
-                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
-                                        6<o:p></o:p>
-                                    </p>
-                                </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         6.5<o:p></o:p>
                                     </p>
                                 </td>
-                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
                                     <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
                                         7<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        7.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        8<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        8.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        9<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="5%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        9.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="3%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        10<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        10.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        11<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        11.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        12<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        13<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        14<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        15<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        16<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        17<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        18<o:p></o:p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                        RUS<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        38<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        39<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        39.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        40<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        41<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        41.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="5%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        42<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="3%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        43<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        43.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        44<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        44.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        45<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        46.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        47.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        48.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        49.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        50.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        51.5<o:p></o:p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                        EUR<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        39<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        40<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        40.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        41<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        42<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        42.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="5%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        43<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="3%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        44<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        44.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        45<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        45.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        46<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        47.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        48.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        49.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        50.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        51.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        52.5<o:p></o:p>
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                        UK<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        5.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        6<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        6.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        7<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        7.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        8<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 5.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="5%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        8.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="width: 3.0%; border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt"
+                                    width="3%">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        9<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        9.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        10<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        10.5<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        11<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        12<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        13<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        14<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        15<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        16<o:p></o:p>
+                                    </p>
+                                </td>
+                                <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: white; padding: 1.4pt 1.4pt 1.4pt 1.4pt">
+                                    <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                        17<o:p></o:p>
                                     </p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
-                        <o:p>&nbsp;</o:p>
-                    </p>
-
                 </div>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <b>Как измерить и подобрать размер женской &nbsp;обуви:<br>
+                    </b>- Поставьте стопу на лист бумаги.<br>
+                    - Обведите контур стопы.<br>
+                    - Измерьте сантиметром расстояние от пятки до края пальцев, чтобы определить длину стопы.<br>
+                    - Определите Ваш размер с помощью таблицы. Всегда округляйте размер до большего.<o:p></o:p>
+                </p>
+                <table border="1" cellpadding="0" cellspacing="0" class="MsoNormalTable" style="width: 100%; border-collapse: collapse; border: none; background-position: initial initial; background-repeat: initial initial;" width="100%">
+                    <tbody>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    Длина ноги. См<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    20.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    22<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    22.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    23<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    23.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    24<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    24.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    25<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    25.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    26<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    26.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border: solid #BFBFBF 1.0pt; border-left: none; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    27<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    USA<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    4<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    4.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    5.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    6<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    6.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    8<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    8.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    9<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    9.5<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    RUS<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    33.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    34<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    34.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    35<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    35.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    36.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    37<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    37.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    38<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    39<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    39.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    EUR<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    34.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    35<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    35.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    36<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    36.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    37.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    38<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    38.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    39<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    40.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    41<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border: solid #BFBFBF 1.0pt; border-top: none; mso-border-top-alt: solid #BFBFBF 1.0pt; background: #EDEDED; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                                    UK<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    1.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    2<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    2.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    3<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    3.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    4<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    4.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    5.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    6<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    6.5<o:p></o:p>
+                                </p>
+                            </td>
+                            <td style="border-top: none; border-left: none; border-bottom: solid #BFBFBF 1.0pt; border-right: solid #BFBFBF 1.0pt; mso-border-top-alt: solid #BFBFBF 1.0pt; mso-border-left-alt: solid #BFBFBF 1.0pt; background: transparent; padding: 2.25pt 2.25pt 2.25pt 2.25pt">
+                                <p align="center" class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt; text-align: center">
+                                    7<o:p></o:p>
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    &nbsp;
+                </p>
+                <p class="MsoNormal" style="margin-bottom: 0cm; margin-bottom: .0001pt">
+                    <o:p>&nbsp;</o:p>
+                </p>
 
             </div>
+
         </div>
+    </div>
     </div>
 </asp:Content>
