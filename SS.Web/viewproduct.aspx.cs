@@ -71,8 +71,8 @@ namespace SS.Web
                     string photoBoxHtml = string.Empty;
                     foreach (var photo in photoBox)
                     {
-                        photoBoxHtml += string.Format(@"<div style='background-color: #909090; text-align: center; position: relative; width: 70px; height: 70px; float: left; margin:5px; border: 2px solid #555;'>
-                                                            <img src='{0}' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: auto; width: auto; max-width: 70px; max-height: 70px; margin: 0px !important; padding: 0px !important;' />
+                        photoBoxHtml += string.Format(@"<div style='background-color: #909090; text-align: center; position: relative; width: 70px; height: 70px; float: left; margin:5px; border: 2px solid #555;' >
+                                                            <img src='{0}' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: auto; width: auto; max-width: 70px; max-height: 70px; margin: 0px !important; padding: 0px !important;' onclick='selectPhoto(this.src);'/>
                                                         </div> ", photo);
                     }
                     PhotoBox.InnerHtml = photoBoxHtml;
