@@ -13,6 +13,9 @@ padding: 0!important;
   margin-top:-2px;
 }
 
+.language :hover {
+    color: #444444;
+}
 
 .yjwm_showcase_holder {
   display:block;

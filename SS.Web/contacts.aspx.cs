@@ -13,14 +13,9 @@ namespace SS.Web
 {
     public partial class contacts : System.Web.UI.Page
     {
-        public contacts()
-        {
-            Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("be-by");
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            this.SetLanguage();
         }
     }
 }

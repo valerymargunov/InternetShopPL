@@ -251,3 +251,7 @@ a.button_details { text-shadow: 1px -1px 1px #515e01; }
  */
 #comments-form #comments-form-send a{background: #a8bc1d url('../images/style3/button.png') repeat-x 0 100%;}
 #comments-form #comments-form-send a:hover{background: #ececec url('../images/button-h.png') repeat-x 0 100%; color: #444}
+
+.language a:hover {
+    color: #444444;
+}

@@ -9,7 +9,7 @@
     <meta name="keywords" content="Одвежда, обувь, аксессуары" />
     <meta name="description" content="" />
     <meta name="generator" content="" />
-    <title>StreetStyleOnline.Ru - Интернет-магазин молодежной обуви и одежды ведущих европейских и американских брендов</title>
+    <title>Saksum | Интернет-магазин</title>
     <link href="styles/icon/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <%--для верхнего слайдшоу--%>
     <link rel="stylesheet" href="modules/mod_btslideshow/assets/skitter/css/skitter.styles.css" type="text/css" />
@@ -65,7 +65,7 @@
                     jQuery(this).css({ width: max_size });
                 }
             });
-            var rel = "position:'right', zoomWidth:'350', zoomHeight:'auto', smoothMove:'15', adjustY:'-4' ";
+            var rel = "position:'right', zoomWidth:'auto', zoomHeight:'auto', smoothMove:'15', adjustY:'-4' ";
             jQuery("div#zoom_main img").wrap('<a href="' + main_image + '" class = "cloud-zoom" id="zoom1" rel="' + rel + '" ></a>');
             var th_num = 0;
             jQuery("div#zoom_thumb img").each(function () {
@@ -124,13 +124,13 @@
                                         <ul class="ja-toppanel-row">
                                             <li class="first-item">
                                                 <div style="text-align: center; font-size: 16px;">
-                                                    Свяжитесь с нами:
+                                                    +375298051729 (viber)
                                                     <br />
-                                                    +7(968) 447-67-15
+                                                    +48534152632
                                                     <br />
-                                                    +7(916) 121-74-15
-                                                    <br />
-                                                    support@streetstyleonline.ru
+                                                    Skype: saksum online pl
+                                                     <br />
+                                                    1firmasaksum@gmail.com
                                                 </div>
                                             </li>
                                         </ul>
@@ -153,12 +153,34 @@
                             <li style="color: white;"><a href="contacts.aspx"><span>Контакты</span></a></li>
                             <li class="item61" style="color: white;"><a href="payment.aspx"><span>Оплата</span></a></li>
                             <li class="item62" style="color: white;"><a href="delivery.aspx"><span>Доставка</span></a></li>
-                            <li class="item63" style="color: white;"><a href="return.aspx"><span>Возврат товара</span></a></li>
+                            <%--<li class="item62" style="color: white;"><a "><span>PL</span></a></li>
+                           <li class="item62" style="color: white;"><a ><span>RU</span></a></li>
+                            --%>
+                            <%--  <li class="item63" style="color: white; "><span><select name="ComboBox" style="background: #1B1919; border: 1px solid #080808;color: white; padding: 0px;
+    border: 0px; z-index: 10000; height: 14px;">
+                                    <option value="1" selected>PL</option>
+                                    <option value="2">RU</option>
+                                </select></span>
+                                
+                                </li>--%>
                         </ul>
                     </div>
 
-                    <div id="gk-items" style="float: right;">
+                    <%--  <div id="gk-items" style="float: right;">
                         (  товаров: <strong>...</strong>)
+                    </div>--%>
+                    <div style="float: right;">
+                        <ul>
+                            <li class="item62" style="color: white; float: left;">
+                                <span>
+                                    <asp:LinkButton runat="server" Text="PL" Font-Bold="True" ForeColor="White" CssClass="language" ID="LanguagePL" OnClick="LanguagePL_Click"></asp:LinkButton>
+                                </span></li>
+                            <li class="item62" style="color: white; float: left;"><span style="margin: 0px 5px;">|</span></li>
+                            <li class="item62" style="color: white; float: left;">
+                                <span>
+                                    <asp:LinkButton runat="server" Text="RU" Font-Bold="True" ForeColor="White"  CssClass="language" ID="LanguageRU" OnClick="LanguageRU_Click"></asp:LinkButton>
+                                </span></li>
+                        </ul>
                     </div>
                     <div id="gk-cart">
                         <a href="#" id="btn_cart"><span>Корзина</span></a>

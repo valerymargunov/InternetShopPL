@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Resources;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -19,6 +20,8 @@ namespace SS.Web
             typeRepository = new TypeRepository();
             categoryRepository = new CategoryRepository();
             GenerateMenu();
+
+            
         }      
 
         private void GenerateMenu()
@@ -61,6 +64,24 @@ namespace SS.Web
                 }
             }
             return menuHtml;
+        }
+
+        protected void LanguagePL_Click(object sender, EventArgs e)
+        {
+            var cookie = new HttpCookie("language");
+            cookie.Value = "pl-pl";
+            cookie.Expires = DateTime.Now.AddYears(1);
+            Response.Cookies.Add(cookie);
+            Response.Redirect(Request.Url.AbsoluteUri);
+        }
+
+        protected void LanguageRU_Click(object sender, EventArgs e)
+        {
+            var cookie = new HttpCookie("language");
+            cookie.Value = "ru-ru";
+            cookie.Expires = DateTime.Now.AddYears(1);
+            Response.Cookies.Add(cookie);
+            Response.Redirect(Request.Url.AbsoluteUri);
         }
     }
 }

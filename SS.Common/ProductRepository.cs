@@ -14,7 +14,7 @@ namespace SS.Common
     public class ProductRepository
     {
         private static string ConnectionString = ConfigurationManager.ConnectionStrings["ssdb"].ConnectionString;
-        public IEnumerable<Product> GetProducts(int categoryId)
+        public IEnumerable<Product> GetProducts(int categoryId, string region)
         {
 
             //     var sql = @"SELECT * FROM Products WHERE categoryId = @categoryId";
@@ -23,7 +23,7 @@ namespace SS.Common
             //    var goods = conn.Query<Product>(sql, new { categoryId});
             //    return goods;
             //}
-            var sql = @"WITH 
+            var sql = String.Format(@"WITH 
                             Rec (CategoryId, ParentId)
                            AS (SELECT CategoryId, ParentId FROM Categories
                               WHERE CategoryId = @categoryId
@@ -33,8 +33,8 @@ namespace SS.Common
                                   INNER JOIN Rec t 
                                    ON C.ParentId = t.CategoryId )
 	
-                        SELECT P.productId, P.categoryId, P.titlePl, P.descriptionPl, P.descriptionRu, P.titleRu, P.photos, P.cost FROM Rec R, Products P
-                        WHERE R.CategoryId = P.categoryId";
+                        SELECT P.productId, P.categoryId, P.title{0}, P.description{0}, P.photos, P.cost{0} FROM Rec R, Products P
+                        WHERE R.CategoryId = P.categoryId", region);
              using (var conn = new SqlConnection(ConnectionString))
             {
                 var goods = conn.Query<Product>(sql, new { categoryId });

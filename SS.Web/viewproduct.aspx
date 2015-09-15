@@ -2,13 +2,21 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
+    <%--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    --%>
     <script type="text/javascript">
         VK.init({ apiId: 4167153, onlyWidgets: true });
     </script>
     <script type="text/javascript">
         function selectPhoto(_src) {
+            //$('.cloud-zoom, .cloud-zoom-gallery').CloudZoom();
             document.getElementById('ContentPlaceHolder1_ImageSrcProduct').src = _src;
-            document.getElementById('zoom1').href = _src;            
+            document.getElementById('zoom1').href = _src;
+            //var a = $('.cloud-zoom');
+            //var b = $('.cloud-zoom-gallery');
+            //CloudZoom($('.cloud-zoom'),$('.cloud-zoom-gallery'));
+            //document.getElementsByClassName('mousetrap')[0].style.width = document.getElementById('ContentPlaceHolder1_ImageSrcProduct').width;
+            //document.getElementsByClassName('mousetrap')[0].style.height = document.getElementById('ContentPlaceHolder1_ImageSrcProduct').height;
         }
     </script>
 </asp:Content>
@@ -20,7 +28,7 @@
                     <div id="wrap" style="top: 0px; z-index: 499; position: relative;">
                         <a runat="server" href="http://img2.wildberries.ru/big/new/1090000/1098912-1.jpg" class="cloud-zoom" id="zoom1" rel="position:'right', zoomWidth:'350', zoomHeight:'auto', smoothMove:'15', adjustY:'-4' " style="position: relative; display: block;">
                             <img id="ImageSrcProduct" runat="server" src="http://img2.wildberries.ru/big/new/1090000/1098912-1.jpg" style="width: 200px; display: block;" /></a>
-                        <div class="mousetrap" style="background-image: url(http://www.streetstyleonline.ru/); z-index: 999; position: absolute; width: 204px; height: 271px; left: 0px; top: 0px; cursor: crosshair;"></div>
+                        <%--<div id="divmousetrap" class="mousetrap" style="background-image: url(http://www.streetstyleonline.ru/); z-index: 999; position: absolute; width: 204px; height: 271px; left: 0px; top: 0px; cursor: crosshair;"></div>--%>
                     </div>
                 </div>
                 <div class="rcolumn" style="float: left">

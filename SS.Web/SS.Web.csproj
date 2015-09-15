@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -180,9 +181,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedResource Include="App_LocalResources\Resource.be.resources" />
+    <EmbeddedResource Include="App_LocalResources\Resource.pl.resources" />
     <EmbeddedResource Include="App_LocalResources\Resource.resources" />
-    <Content Include="Resx\Resource.be.resx" />
+    <EmbeddedResource Include="Resx\Resource.pl.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
