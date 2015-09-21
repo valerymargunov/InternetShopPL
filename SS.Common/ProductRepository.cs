@@ -33,7 +33,7 @@ namespace SS.Common
                                   INNER JOIN Rec t 
                                    ON C.ParentId = t.CategoryId )
 	
-                        SELECT P.productId, P.categoryId, P.title{0}, P.description{0}, P.photos, P.cost{0} FROM Rec R, Products P
+                        SELECT P.productId, P.categoryId, P.title{0}, P.description{0}, P.photos, P.cost FROM Rec R, Products P
                         WHERE R.CategoryId = P.categoryId", region);
              using (var conn = new SqlConnection(ConnectionString))
             {
@@ -42,9 +42,9 @@ namespace SS.Common
             }
         }
 
-        public Product GetProduct(int idProduct)
+        public Product GetProduct(int idProduct, string region)
         {
-            var sql = @"SELECT * FROM Products WHERE ProductId = @idProduct";
+            var sql = String.Format(@"SELECT P.ProductId, P.title{0}, P.description{0}, P.photos, P.cost FROM Products P WHERE ProductId = @idProduct", region);
             using (var conn = new SqlConnection(ConnectionString))
             {
                 var goods = conn.Query<Product>(sql, new { idProduct }).FirstOrDefault();

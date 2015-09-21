@@ -118,6 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address" xml:space="preserve">
-    <value>adres</value>
+    <value>Adres</value>
+  </data>
+  <data name="Commen" xml:space="preserve">
+    <value>KOMENTARZE</value>
+  </data>
+  <data name="Contacty" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="Dostavka" xml:space="preserve">
+    <value>Dostarczanie</value>
+  </data>
+  <data name="Edenizy" xml:space="preserve">
+    <value>zl</value>
+  </data>
+  <data name="Oplata" xml:space="preserve">
+    <value>Płatności</value>
+  </data>
+  <data name="Opros" xml:space="preserve">
+    <value>ANKIETA</value>
+  </data>
+  <data name="Telefony" xml:space="preserve">
+    <value>Telefony</value>
+  </data>
+  <data name="UvelichinaKarta" xml:space="preserve">
+    <value>Wyświetl większą mapę</value>
+  </data>
+  <data name="Zena" xml:space="preserve">
+    <value>CENA</value>
   </data>
 </root>

@@ -15,6 +15,7 @@ namespace SS.Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.SetLanguage();
             //if (!String.IsNullOrEmpty(Request.QueryString["idProduct"]))
             //{
             //    goodsRepository = new ProductRepository();
@@ -56,14 +57,15 @@ namespace SS.Web
                 goodsRepository = new ProductRepository();
                 brandRepository = new BrandRepository();
                 int idProduct = 0;
+                string region = this.FirstCharToUpper(this.GetLanguage().Substring(0, 2));
                 Int32.TryParse(Request.QueryString["idProduct"], out idProduct);
-                var product = goodsRepository.GetProduct(idProduct);
+                var product = goodsRepository.GetProduct(idProduct, region);
                 if (product != null)
                 {
-                    TitleProduct.InnerText = product.TitleRu;
-                    
+                    TitleProduct.InnerText = region == "Ru" ? product.TitleRu : product.TitlePl;
 
-                    PriceProduct.InnerText = product.Cost.ToString() + " Руб.";
+                    SpanDescription.InnerText = region == "Ru" ? product.DescriptionRu : product.DescriptionPl;
+                    PriceProduct.InnerText = product.Cost.ToString() + " " + this.GetString("Edenizy");
                     ////////////////
                     string[] photoBox = product.Photos.Split('|');
                     zoom1.HRef = photoBox[0];

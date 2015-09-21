@@ -13,7 +13,7 @@
                             <div id="component" class="clear">
                                 <h2 class="contentheading clearfix">
 
-                                    <span>Способы оплаты товара в интернет-магазине StreetStyleOnline</span>
+                                    <span>Способы оплаты товара в интернет-магазине</span>
                                 </h2>
                                 <div class="article-content">
                                     <p style="color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif;">

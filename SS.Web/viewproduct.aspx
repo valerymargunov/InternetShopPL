@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/global.Master" AutoEventWireup="true" CodeBehind="viewproduct.aspx.cs" Inherits="SS.Web.viewproduct" %>
 
+<%@ Import Namespace="SS.Web" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <script type="text/javascript" src="//vk.com/js/api/openapi.js?105"></script>
     <%--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
@@ -28,13 +29,12 @@
                     <div id="wrap" style="top: 0px; z-index: 499; position: relative;">
                         <a runat="server" href="http://img2.wildberries.ru/big/new/1090000/1098912-1.jpg" class="cloud-zoom" id="zoom1" rel="position:'right', zoomWidth:'350', zoomHeight:'auto', smoothMove:'15', adjustY:'-4' " style="position: relative; display: block;">
                             <img id="ImageSrcProduct" runat="server" src="http://img2.wildberries.ru/big/new/1090000/1098912-1.jpg" style="width: 200px; display: block;" /></a>
-                        <%--<div id="divmousetrap" class="mousetrap" style="background-image: url(http://www.streetstyleonline.ru/); z-index: 999; position: absolute; width: 204px; height: 271px; left: 0px; top: 0px; cursor: crosshair;"></div>--%>
                     </div>
                 </div>
                 <div class="rcolumn" style="float: left">
                     <h1><span itemprop="name" id="TitleProduct" runat="server">Куртка Paul Frank Julius Sporty Navy</span> </h1>
                     <div class="pprice" style="font-size: 18pt; margin-bottom: 10px;">
-                        Цена: 
+                        <%= this.GetString("Zena") %>: 
                         <strong><span id="PriceProduct" runat="server" class="productPrice"></span></strong>
                     </div>
                     <div style="float: left; padding: 0;">
@@ -58,16 +58,18 @@
                     <div id="PhotoBox" runat="server" class="vmCartContainer">
                     </div>
                 </div>
-
+                <div>
+                    <span id="SpanDescription" runat="server" class="productPrice"></span>
+                </div>
             </div>
-            <div style="margin-right: 20px; text-align: right;">
+            <%-- <div style="margin-right: 20px; text-align: right;">
                 <asp:Button ID="PayButton" runat="server" Text="Добавить в корзину" Height="30px" CssClass="input" />
-            </div>
+            </div>--%>
         </div>
         <ul id="gk_product_tabs">
-            <li class="gk_product_tab_active"><span>Комментарии</span></li>
-            <li><span>Опрос</span></li>
-            <li><span>Подобрать размер</span></li>
+            <li class="gk_product_tab_active"><span><%= this.GetString("Commen") %></span></li>
+            <li><span><%= this.GetString("Opros") %></span></li>
+            <%--<li><span>Подобрать размер</span></li>--%>
         </ul>
         <div class="td_bg clearfix">
             <div id="gk_product_tab_1" class="gk_product_tab">

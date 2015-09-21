@@ -118,6 +118,33 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Address" xml:space="preserve">
-    <value>адрес</value>
+    <value>Адрес</value>
+  </data>
+  <data name="Commen" xml:space="preserve">
+    <value>КОММЕНТАРИИ</value>
+  </data>
+  <data name="Contacty" xml:space="preserve">
+    <value>Контакты</value>
+  </data>
+  <data name="Dostavka" xml:space="preserve">
+    <value>Доставка</value>
+  </data>
+  <data name="Edenizy" xml:space="preserve">
+    <value>Руб.</value>
+  </data>
+  <data name="Oplata" xml:space="preserve">
+    <value>Оплата</value>
+  </data>
+  <data name="Opros" xml:space="preserve">
+    <value>ОПРОС</value>
+  </data>
+  <data name="Telefony" xml:space="preserve">
+    <value>Телефоны для справок</value>
+  </data>
+  <data name="UvelichinaKarta" xml:space="preserve">
+    <value>Просмотреть увеличенную карту</value>
+  </data>
+  <data name="Zena" xml:space="preserve">
+    <value>ЦЕНА</value>
   </data>
 </root>

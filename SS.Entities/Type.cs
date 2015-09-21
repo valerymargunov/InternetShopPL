@@ -9,6 +9,7 @@ namespace SS.Entities
     public class Type
     {
         public int TypeId { get; set; }
-        public string TitleOfType { get; set; }
+        public string TitleOfTypeRu { get; set; }
+        public string TitleOfTypePl { get; set; }
     }
 }

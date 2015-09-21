@@ -14,6 +14,7 @@ namespace SS.Web
         private ProductRepository productRepository = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.SetLanguage();
             ProductsBind();
         }
 
@@ -35,7 +36,6 @@ namespace SS.Web
                     item.Photos = item.Photos.Split('|').FirstOrDefault();
                     item.Description = item.DescriptionRu;
                     item.Title = item.TitleRu;
-                    item.Cost = item.CostRu;
                 }
             }
             else if (region == "Pl")
@@ -45,7 +45,6 @@ namespace SS.Web
                     item.Photos = item.Photos.Split('|').FirstOrDefault();
                     item.Description = item.DescriptionPl;
                     item.Title = item.TitlePl;
-                    item.Cost = item.CostPl;
                 }
             }
             ListProducts.DataSource = listGoods;

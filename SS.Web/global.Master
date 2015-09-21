@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="global.master.cs" Inherits="SS.Web.global" %>
 
+<%@ Import Namespace="SS.Web" %>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
@@ -139,7 +140,7 @@
                                 <div class="ja-toppanel-button-wraper " id="ja-toppanel-button-wraper-177">
                                     <div class="ja-toppanel-button-subwap btn-left">
                                         <div class="ja-toppanel-button-l"></div>
-                                        <div class="ja-toppanel-button">Контакты</div>
+                                        <div class="ja-toppanel-button"><%= this.GetString("Contacty") %></div>
                                         <div class="ja-toppanel-button-r"></div>
                                     </div>
                                 </div>
@@ -150,9 +151,9 @@
                 <div id="gk-toolbar">
                     <div id="gk-top-menu">
                         <ul>
-                            <li style="color: white;"><a href="contacts.aspx"><span>Контакты</span></a></li>
-                            <li class="item61" style="color: white;"><a href="payment.aspx"><span>Оплата</span></a></li>
-                            <li class="item62" style="color: white;"><a href="delivery.aspx"><span>Доставка</span></a></li>
+                            <li style="color: white;"><a href="contacts.aspx"><span><%= this.GetString("Contacty") %></span></a></li>
+                            <li class="item61" style="color: white;"><a href="payment.aspx"><span><%= this.GetString("Oplata") %></span></a></li>
+                            <li class="item62" style="color: white;"><a href="delivery.aspx"><span><%= this.GetString("Dostavka") %></span></a></li>
                             <%--<li class="item62" style="color: white;"><a "><span>PL</span></a></li>
                            <li class="item62" style="color: white;"><a ><span>RU</span></a></li>
                             --%>
@@ -182,14 +183,14 @@
                                 </span></li>
                         </ul>
                     </div>
-                    <div id="gk-cart">
+                    <%--<div id="gk-cart">
                         <a href="#" id="btn_cart"><span>Корзина</span></a>
                     </div>
                     <div id="gk-tools">
                         <div>
                             <a href="login.aspx" id="btn_login_new"><span style="margin-left: 4px;">Авторизация | Регистрация</span></a>
                         </div>
-                    </div>
+                    </div>--%>
                 </div>
                 <!-- MAIN NAVIGATION -->
                 <div id="gk-nav-wrap" class="clearfix">
@@ -396,7 +397,7 @@
 })();</script>
                     <div class="pluso" data-background="transparent" data-options="big,square,line,horizontal,nocounter,theme=03" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,vkrugu,yazakladki"></div>
                     <div class="gk-copyright" style="text-align: center; float: none !important">
-                        Copyright © 2014, StreetStyleOnline.Ru | Все права защищены.
+                        Copyright © 2014, Saksum.Pl | Все права защищены.
                     </div>
                 </div>
                 <div id="gk-footer" class="clearfix">

@@ -1,5 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/global.Master" AutoEventWireup="true" CodeBehind="delivery.aspx.cs" Inherits="SS.Web.delivery" %>
 
+<%@ Import Namespace="SS.Web" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <title>Доставка</title>
 </asp:Content>
@@ -12,7 +13,7 @@
                         <div id="component_wrap" class="clear">
                             <div id="component" class="clear">
                                 <h2 class="contentheading clearfix">
-                                    <span>Доставка</span>
+                                    <span><%= this.GetString("Dostavka") %></span>
                                 </h2>
                                 <div class="article-content">
                                     <p>
