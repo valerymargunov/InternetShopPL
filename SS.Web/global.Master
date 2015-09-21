@@ -151,8 +151,9 @@
                 <div id="gk-toolbar">
                     <div id="gk-top-menu">
                         <ul>
+                            <li style="color: white;"><a href="company.aspx"><span>О компании <%= this.GetString("Company") %></span></a></li>
                             <li style="color: white;"><a href="contacts.aspx"><span><%= this.GetString("Contacty") %></span></a></li>
-                            <li class="item61" style="color: white;"><a href="payment.aspx"><span><%= this.GetString("Oplata") %></span></a></li>
+<%--                            <li class="item61" style="color: white;"><a href="payment.aspx"><span><%= this.GetString("Oplata") %></span></a></li>--%>
                             <li class="item62" style="color: white;"><a href="delivery.aspx"><span><%= this.GetString("Dostavka") %></span></a></li>
                             <%--<li class="item62" style="color: white;"><a "><span>PL</span></a></li>
                            <li class="item62" style="color: white;"><a ><span>RU</span></a></li>

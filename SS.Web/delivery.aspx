@@ -15,44 +15,23 @@
                                 <h2 class="contentheading clearfix">
                                     <span><%= this.GetString("Dostavka") %></span>
                                 </h2>
-                                <div class="article-content">
-                                    <p>
-                                        <span style="font-size: 12px;">&nbsp; Доставка курьером по Солнечногорску производится несколько раз в неделю. Когда Ваш заказ будет собран, с Вами &nbsp;свяжется наш менеджер и уточнит удобное для Вас время доставки. Срок доставки от 2 до 7 дней.</span>
-                                    </p>
-                                    <p style="margin-bottom: 0cm">
-                                        <span style="font-size: 12px;"><strong>&nbsp; Доставка по Солнечногорску бесплатна.</strong></span>
-                                    </p>
-                                    <p style="margin-bottom: 0cm">
-                                        <span style="font-size: 12px;">
-                                            <br />
-                                            &nbsp; Доставка в другие города рассчитывается отдельно. Всю информацию сообщит вам наш менеджер по телефону.</span>
-                                    </p>
-                                    <p style="margin: 12px 0px; padding: 0px; border: 0px none; font-size: 12px; line-height: 18px; vertical-align: baseline">
-                                        <span style="color: #99cc00">&nbsp; Срок доставки:</span>&nbsp;от 2 до 7 дней.
-                                            <br />
-                                    </p>
-                                    <p style="margin: 12px 0px; padding: 0px; border: 0px none; font-size: 12px; line-height: 18px; vertical-align: baseline">
-                                        <span style="font-size: 12px"><span style="color: #99cc00">&nbsp; Доставка:</span> Солнечногорск, Зеленоград, Клин</span>
-                                    </p>
-                                    <p style="margin: 12px 0px; padding: 0px; border: 0px none; font-size: 12px; line-height: 18px; vertical-align: baseline; float: none !important">
-                                        <span style="font-size: 12px"><span style="color: #99cc00">&nbsp; Бесплатная доставка:</span> Солнечногорск</span>
-                                    </p>
-                                    <p style="margin: 12px 0px; padding: 0px; border: 0px none; font-size: 12px; line-height: 18px; vertical-align: baseline; float: none !important">
-                                        <span style="font-size: 12px"><span style="color: #99cc00">
-                                            <span style="color: #33cc00">
-                                                <span style="color: #99cc00">&nbsp; Телефон:</span>
-                                            </span>
-                                            <strong>
-                                                <span style="color: #33cc00"></span>
-                                            </strong>
-                                        </span>
-                                        </span>
-                                        <span style="font-size: 12px">+7 (968) 447-67-15, +7 (916) 121-74-15</span>
-                                    </p>
+                                <div class="article-content"> 
                                     <div>
-                                        <span style="font-size: 12px">
-                                            <br />
+                                        Sposób dostawy:
+                                        <ul>
+                                            <li>Przesyłka kurierska</li>
+                                            <li>Przesyłka kurierska pobraniowa</li>
+                                            <li>Paczka pocztowa priorytetowa</li>
+                                            <li>Pocztex Kurier48</li>
+                                            <li>Odbiór osobisty</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <p>
+                                        <span style="font-size: 12px;">Пункт вывоза: ul.Kawaleryjska 19/23 lok 121D Bialystok (Белосток)
+доставка в Беларусь по договоренности.
                                         </span>
+                                    </p>
                                     </div>
                                 </div>
                             </div>

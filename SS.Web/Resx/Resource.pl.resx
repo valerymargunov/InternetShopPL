@@ -123,26 +123,29 @@
   <data name="Commen" xml:space="preserve">
     <value>KOMENTARZE</value>
   </data>
+  <data name="Company" xml:space="preserve">
+    <value>SPRZEDAŻ ARTYKUŁÓW DZIECIĘCYCH</value>
+  </data>
   <data name="Contacty" xml:space="preserve">
     <value>Kontakt</value>
   </data>
+  <data name="CzasPracy" xml:space="preserve">
+    <value>od poniedziałku do niedzieli 5.00-13.00</value>
+  </data>
+  <data name="CzasPracyTitle" xml:space="preserve">
+    <value>Czas Prazy</value>
+  </data>
   <data name="Dostavka" xml:space="preserve">
-    <value>Dostarczanie</value>
-  </data>
-  <data name="Edenizy" xml:space="preserve">
-    <value>zl</value>
-  </data>
-  <data name="Oplata" xml:space="preserve">
-    <value>Płatności</value>
+    <value>Dostawa</value>
   </data>
   <data name="Opros" xml:space="preserve">
-    <value>ANKIETA</value>
+    <value>ANKIETE</value>
   </data>
   <data name="Telefony" xml:space="preserve">
     <value>Telefony</value>
   </data>
   <data name="UvelichinaKarta" xml:space="preserve">
-    <value>Wyświetl większą mapę</value>
+    <value>Pokaż na mapie</value>
   </data>
   <data name="Zena" xml:space="preserve">
     <value>CENA</value>

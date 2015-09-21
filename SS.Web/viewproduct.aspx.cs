@@ -65,7 +65,9 @@ namespace SS.Web
                     TitleProduct.InnerText = region == "Ru" ? product.TitleRu : product.TitlePl;
 
                     SpanDescription.InnerText = region == "Ru" ? product.DescriptionRu : product.DescriptionPl;
-                    PriceProduct.InnerText = product.Cost.ToString() + " " + this.GetString("Edenizy");
+                    PriceProduct.InnerText = product.Cost.ToString() + " " + "zl";
+                    Dostavka.InnerText = product.Dostavka.ToString() + " " + "zl";
+                    DostavkaPr.InnerText = product.DostavkaPobraniowa.ToString() + " " + "zl";
                     ////////////////
                     string[] photoBox = product.Photos.Split('|');
                     zoom1.HRef = photoBox[0];

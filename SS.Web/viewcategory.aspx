@@ -43,7 +43,7 @@
                                 <img src='<%#Eval("Photos").ToString() %>' class='' style='position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); height: auto; width: auto; max-width: 150px; max-height: 150px; margin: 0px !important; padding: 0px !important; ' title='<%#Eval("Title").ToString() %>' alt='<%#Eval("Title").ToString() %>' />
                             </div>
                             <%--<p id='price_stl' style="margin-top: 0px;">--%>
-                            <span id='price_stl' class='' style="margin-top: 0px;"><%#Eval("Cost").ToString() %> <%= this.GetString("Edenizy") %></span>
+                            <span id='price_stl' class='' style="margin-top: 0px;"><%#Eval("Cost").ToString() %>  zl</span>
                             <%-- </p>--%>
                         </div>
                     </a>

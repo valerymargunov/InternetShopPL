@@ -44,7 +44,7 @@ namespace SS.Common
 
         public Product GetProduct(int idProduct, string region)
         {
-            var sql = String.Format(@"SELECT P.ProductId, P.title{0}, P.description{0}, P.photos, P.cost FROM Products P WHERE ProductId = @idProduct", region);
+            var sql = String.Format(@"SELECT P.ProductId, P.Dostavka, P.DostavkaPobraniowa, P.title{0}, P.description{0}, P.photos, P.cost FROM Products P WHERE ProductId = @idProduct", region);
             using (var conn = new SqlConnection(ConnectionString))
             {
                 var goods = conn.Query<Product>(sql, new { idProduct }).FirstOrDefault();

@@ -35,7 +35,16 @@
                     <h1><span itemprop="name" id="TitleProduct" runat="server">Куртка Paul Frank Julius Sporty Navy</span> </h1>
                     <div class="pprice" style="font-size: 18pt; margin-bottom: 10px;">
                         <%= this.GetString("Zena") %>: 
-                        <strong><span id="PriceProduct" runat="server" class="productPrice"></span></strong>
+                        <strong><span id="PriceProduct" runat="server"></span></strong>
+                        <br/>
+                      
+                    </div>
+                     <div class="pprice" style="color: #555555; margin-bottom: 10px;">
+                        <span>Sposób dostawy:</span>
+                         <br/>
+                        Przesyłka kurierska: <strong><span id="Dostavka" runat="server" ></span></strong>
+                        <br />
+                        Przesyłka kurierska pobraniowa: <strong><span id="DostavkaPr" runat="server" ></span></strong>
                     </div>
                     <div style="float: left; padding: 0;">
                         <script type="text/javascript">

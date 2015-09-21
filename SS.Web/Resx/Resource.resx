@@ -123,23 +123,26 @@
   <data name="Commen" xml:space="preserve">
     <value>КОММЕНТАРИИ</value>
   </data>
+  <data name="Company" xml:space="preserve">
+    <value>О компании</value>
+  </data>
   <data name="Contacty" xml:space="preserve">
     <value>Контакты</value>
   </data>
+  <data name="CzasPracy" xml:space="preserve">
+    <value>пн-вс  5.00-13.00</value>
+  </data>
+  <data name="CzasPracyTitle" xml:space="preserve">
+    <value>Время работы</value>
+  </data>
   <data name="Dostavka" xml:space="preserve">
     <value>Доставка</value>
-  </data>
-  <data name="Edenizy" xml:space="preserve">
-    <value>Руб.</value>
-  </data>
-  <data name="Oplata" xml:space="preserve">
-    <value>Оплата</value>
   </data>
   <data name="Opros" xml:space="preserve">
     <value>ОПРОС</value>
   </data>
   <data name="Telefony" xml:space="preserve">
-    <value>Телефоны для справок</value>
+    <value>Телефоны</value>
   </data>
   <data name="UvelichinaKarta" xml:space="preserve">
     <value>Просмотреть увеличенную карту</value>

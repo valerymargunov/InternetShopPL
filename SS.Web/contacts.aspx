@@ -21,6 +21,12 @@
                                     <span> <%= this.GetString("Contacty") %></span>
                                 </h2>
                                 <div class="article-content">
+                                     <p style="text-align: center;">
+                                        <span style="font-size: 14px;"><strong><span style="font-size: 14px;"><%= this.GetString("CzasPracyTitle") %>:</span></strong></span>
+                                        <strong>
+                                            <span style="color: black; font-size: 14px;"><%= this.GetString("CzasPracy") %></span>
+                                        </strong>
+                                    </p>
                                     <p style="text-align: center;">
                                         <span style="font-size: 14px;"><strong><span style="font-size: 14px;"><%= this.GetString("Address") %>:</span></strong></span>
                                         <strong>

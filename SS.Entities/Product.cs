@@ -20,5 +20,7 @@ namespace SS.Common.Entities
         public string DescriptionPl { get; set; }
         public string Description { get; set; }
         public string Photos { get; set; }
+        public int Dostavka { get; set; }
+        public int DostavkaPobraniowa { get; set; }
     }
 }
